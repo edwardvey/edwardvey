@@ -1,17 +1,18 @@
-# This name appears in the Actions sidebar
 name: Generate Custom Snake
 
-# These triggers tell GitHub when to run—and enable the “Run workflow” button
 on:
-  workflow_dispatch: # ← manual trigger
-  schedule: # ← daily cron trigger
+  workflow_dispatch:
+  schedule:
     - cron: "0 0 * * *"
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: true
 
       - name: Install dependencies
         run: npm ci
@@ -24,5 +25,5 @@ jobs:
         with:
           message: "chore: update snake animation"
           add: "dist/github-contribution-grid-snake.svg"
-          new_branch: output
-          force: true
+          new_branch: output # remove this line to commit to main
+          push: true
