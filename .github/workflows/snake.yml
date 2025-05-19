@@ -33,3 +33,4 @@ jobs:
           new_branch: output
           pull: true
           push: true
+          token: ${{ secrets.GITHUB_TOKEN }}
