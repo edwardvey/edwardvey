@@ -10,13 +10,12 @@ const ROWS = 7;
 const COLS = 52;
 const WEEK_OFFSET = 16; // adjust to center text horizontally
 
-// Define the 7×N boolean matrix for each letter & symbol (columns represent weeks)
-// Here, we concatenate letter patterns side-by-side: E, d, w, a, r, d, space, V, e, y, space, |, space, S, o, f, t, w, a, r, e, space, E, n, g, i, n, e, e, r
+// Define the 7×N boolean matrix for each letter & symbol
+// You need to fill in the boolean patterns for each character yourself
 const LETTER_MATRIX: boolean[][] = [
-  // Each inner array is 7 booleans (Sunday->Saturday) per column. Example for 'E' (5 columns):
-  // [true, true, true, true, true, true, true], // full column
-  // ... continue for each column of each character
-  // Due to brevity, fill in your own boolean patterns here.
+  // Example pattern: a single column fully on
+  // [true, true, true, true, true, true, true],
+  // Replace these with your letter patterns
 ];
 
 interface Cell {
@@ -25,9 +24,13 @@ interface Cell {
   fade?: boolean;
 }
 
-// Generate the path visiting all "on" cells first, then fading the rest
+/**
+ * Generate the path visiting all "on" cells first (to draw letters),
+ * then fading all other cells.
+ */
 function generatePath(): Cell[] {
   const path: Cell[] = [];
+
   // 1. Highlight letter cells in reading order
   for (let col = 0; col < LETTER_MATRIX.length; col++) {
     for (let row = 0; row < ROWS; row++) {
@@ -40,7 +43,11 @@ function generatePath(): Cell[] {
   // 2. Fade other cells
   for (let x = 0; x < COLS; x++) {
     for (let y = 0; y < ROWS; y++) {
-      const isLetter = LETTER_MATRIX[x - WEEK_OFFSET]?.[y];
+      const matrixCol = x - WEEK_OFFSET;
+      const isLetter =
+        matrixCol >= 0 &&
+        matrixCol < LETTER_MATRIX.length &&
+        LETTER_MATRIX[matrixCol][y];
       if (!isLetter) {
         path.push({ x, y, fade: true });
       }
@@ -50,35 +57,36 @@ function generatePath(): Cell[] {
   return path;
 }
 
-// Render SVG for snake animation
+/**
+ * Render an animated SVG based on the path.
+ */
 function renderSnakeSVG(path: Cell[]): string {
-  const cellSize = 12; // adjust for cell pixel size
+  const cellSize = 12; // pixel size of each cell
   const width = COLS * cellSize;
   const height = ROWS * cellSize;
 
-  // Build SVG elements
   let svg = `<?xml version="1.0" encoding="UTF-8"?>
 <svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg">
 `;
 
-  // Draw calendar grid (cells)
+  // Draw base grid
   for (let x = 0; x < COLS; x++) {
     for (let y = 0; y < ROWS; y++) {
-      const px = x * cellSize;
-      const py = y * cellSize;
-      svg += `  <rect x="${px}" y="${py}" width="${cellSize}" height="${cellSize}" fill="#ebedf0" />\n`;
+      svg += `  <rect x="${x * cellSize}" y="${
+        y * cellSize
+      }" width="${cellSize}" height="${cellSize}" fill="#ebedf0" />\n`;
     }
   }
 
-  // Add snake steps
+  // Draw snake steps
   path.forEach((cell, idx) => {
     const px = cell.x * cellSize;
     const py = cell.y * cellSize;
-    const delay = idx * 100; // milliseconds per step
-    const opacity = cell.fade ? 0.1 : 1;
+    const delay = idx * 100; // ms before this step animates
+    const targetOpacity = cell.fade ? 0.1 : 1;
 
-    svg += `  <rect x="${px}" y="${py}" width="${cellSize}" height="${cellSize}" fill="#1b873e" fill-opacity="${opacity}">
-    <animate attributeName="fill-opacity" from="0" to="${opacity}" begin="${delay}ms" dur="200ms" fill="freeze" />
+    svg += `  <rect x="${px}" y="${py}" width="${cellSize}" height="${cellSize}" fill="#1b873e" fill-opacity="0">
+    <animate attributeName="fill-opacity" from="0" to="${targetOpacity}" begin="${delay}ms" dur="200ms" fill="freeze" />
   </rect>\n`;
   });
 
@@ -86,10 +94,19 @@ function renderSnakeSVG(path: Cell[]): string {
   return svg;
 }
 
-// Main execution
-typemodule.exports = async function main() {
+/**
+ * Main entrypoint: generate the SVG and write to disk.
+ */
+async function main() {
   const path = generatePath();
   const svg = renderSnakeSVG(path);
+
   fs.mkdirSync("dist", { recursive: true });
   fs.writeFileSync("dist/github-contribution-grid-snake.svg", svg, "utf8");
-};
+  console.log("SVG generated at dist/github-contribution-grid-snake.svg");
+}
+
+main().catch((err) => {
+  console.error(err);
+  process.exit(1);
+});
