@@ -31,5 +31,5 @@ jobs:
         with:
           author_name: Edward Vey
           author_email: edwardvey@users.noreply.github.com
-          message: "chore: update snake animation"
+          message: "Generate Snake Animation"
           push: true
