@@ -1,5 +1,8 @@
 name: Generate Custom Snake
 
+permissions:
+  contents: write # ← allow pushes
+
 on:
   workflow_dispatch:
   schedule:
