@@ -1,10 +1,3 @@
-name: Generate Custom Snake
-
-on:
-  schedule:
-    - cron: "0 0 * * *" # daily at midnight UTC
-  workflow_dispatch:
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -22,4 +15,5 @@ jobs:
         with:
           message: "chore: update snake animation"
           add: "dist/github-contribution-grid-snake.svg"
-          branch: output
+          new_branch: output # or omit for main
+          force: true # only needed if dist/ remains in .gitignore
