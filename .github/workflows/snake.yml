@@ -31,4 +31,5 @@ jobs:
           message: "chore: update snake animation"
           add: "dist/github-contribution-grid-snake.svg"
           new_branch: output
+          pull: true
           push: true
