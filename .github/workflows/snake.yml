@@ -1,7 +1,7 @@
 name: Generate Custom Snake
 
 permissions:
-  contents: write # ← allow pushes
+  contents: write
 
 on:
   workflow_dispatch:
@@ -33,4 +33,3 @@ jobs:
           new_branch: output
           pull: true
           push: true
-          token: ${{ secrets.GITHUB_TOKEN }}
