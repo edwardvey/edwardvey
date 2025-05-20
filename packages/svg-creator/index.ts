@@ -125,7 +125,7 @@ export const createSvg = (
     "Nov",
     "Dec",
   ];
-  const currentDate = new Date(); // Current date: May 20, 2025, 06:48 PM BST
+  const currentDate = new Date(); // Current date: May 20, 2025, 06:54 PM BST
   const currentMonthIndex = currentDate.getMonth(); // 0-based index (May = 4)
   const totalDays = grid.width * 7; // 53 weeks * 7 days = 371 days
   const daysPerMonth = Math.floor(totalDays / 12); // ~30.92 days per month
@@ -141,25 +141,29 @@ export const createSvg = (
   );
 
   // Calculate offset for May 1, 2025 (approximate days from start to May 1)
-  const startDate = new Date(
-    currentDate.getFullYear() - 1,
-    currentDate.getMonth(),
-    1
-  ); // Approx start: May 1, 2024
+  const startDate = new Date("2024-05-19"); // Approx grid start: Sunday, May 19, 2024
   const may1Date = new Date(currentDate.getFullYear(), 4, 1); // May 1, 2025
   const daysToMay1 = Math.floor(
     (may1Date.valueOf() - startDate.valueOf()) / (1000 * 60 * 60 * 24)
-  ); // Days from May 1, 2024, to May 1, 2025
+  ); // Days from May 19, 2024, to May 1, 2025
   const columnOffset = Math.min(
     Math.max(0, Math.floor((totalDays - daysToMay1) / 7)),
     grid.width - 1
   ); // Convert to column (0-52)
   const baseX = (grid.width - columnOffset) * drawOptions.sizeCell; // Start May 1 at this x
+  console.log(
+    "::debug::Days To May 1:",
+    daysToMay1,
+    "Column Offset:",
+    columnOffset,
+    "Base X:",
+    baseX
+  );
 
   // Space months evenly across the grid, starting June 2024 at left
   for (let i = 0; i < 12; i++) {
     const monthIndex = (currentMonthIndex - i + 12) % 12; // Wrap around
-    const x = baseX - i * (totalDays / 12) * (drawOptions.sizeCell / 7); // Spread across days, converted to pixels
+    const x = -i * (totalDays / 12) * (drawOptions.sizeCell / 7) + baseX; // Spread across days, converted to pixels
     const attrs = {
       x: x,
       y: -drawOptions.sizeCell * 0.5,
