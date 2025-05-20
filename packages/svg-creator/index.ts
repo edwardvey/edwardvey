@@ -94,11 +94,12 @@ export const createSvg = (
     createSnake(chain, drawOptions, duration),
   ];
 
+  // Adjusted viewBox to ensure labels are visible
   const viewBox = [
-    -drawOptions.sizeCell,
-    -drawOptions.sizeCell * 2,
-    width,
-    height,
+    -drawOptions.sizeCell * 2, // Extend left for day labels
+    -drawOptions.sizeCell * 3, // Extend up for month labels
+    width + drawOptions.sizeCell * 2,
+    height + drawOptions.sizeCell * 2,
   ].join(" ");
 
   const style =
@@ -124,7 +125,13 @@ export const createSvg = (
     "Nov",
     "Dec",
   ];
-  const weeksPerMonth = grid.width / 12;
+  const weeksPerMonth = Math.floor(grid.width / 12) || 1;
+  console.log(
+    "::debug::Grid Width:",
+    grid.width,
+    "Weeks Per Month:",
+    weeksPerMonth
+  );
   for (let month = 0; month < 12; month++) {
     const x = month * weeksPerMonth * drawOptions.sizeCell;
     const attrs = {
@@ -134,12 +141,15 @@ export const createSvg = (
       fill: drawOptions.dark ? "#ffffff" : "#000000",
       "text-anchor": "middle",
     };
-    monthLabels.push(`<text ${toAttribute(attrs)}>${months[month]}</text>`);
+    const label = `<text ${toAttribute(attrs)}>${months[month]}</text>`;
+    monthLabels.push(label);
+    console.log("::debug::Month Label", month, ":", label);
   }
 
   // Add day labels on the left (Mon, Wed, Fri)
   const dayLabels: string[] = [];
   const days = ["Mon", "Wed", "Fri"];
+  console.log("::debug::Grid Height:", grid.height);
   for (let day = 0; day < days.length; day++) {
     const y = (day * 2 + 1) * drawOptions.sizeCell;
     const attrs = {
@@ -149,8 +159,16 @@ export const createSvg = (
       fill: drawOptions.dark ? "#ffffff" : "#000000",
       "text-anchor": "end",
     };
-    dayLabels.push(`<text ${toAttribute(attrs)}>${days[day]}</text>`);
+    const label = `<text ${toAttribute(attrs)}>${days[day]}</text>`;
+    dayLabels.push(label);
+    console.log("::debug::Day Label", day, ":", label);
   }
+
+  // Debug: Log draw options and size cell
+  console.log("::debug::Draw Options:", drawOptions);
+  console.log("::debug::Size Cell:", drawOptions.sizeCell);
+
+  // Build SVG with labels explicitly included
   const svg = [
     h("svg", {
       viewBox,
@@ -158,21 +176,41 @@ export const createSvg = (
       height,
       xmlns: "http://www.w3.org/2000/svg",
     }).replace("/>", ">"),
-
     "<desc>",
     "Generated with https://github.com/Platane/snk",
     "</desc>",
-
     "<style>",
     optimizeCss(style),
     "</style>",
-
     ...elements.map((e) => e.svgElements).flat(),
-
+    ...monthLabels.map((label) =>
+      label
+        .replace('fill="#ffffff"', 'fill="#ff0000"')
+        .replace('fill="#000000"', 'fill="#ff0000"')
+    ),
+    ...dayLabels.map((label) =>
+      label
+        .replace('fill="#ffffff"', 'fill="#ff0000"')
+        .replace('fill="#000000"', 'fill="#ff0000"')
+    ),
     "</svg>",
   ].join("");
 
-  return optimizeSvg(svg);
+  // Debug: Check SVG content before and after optimization
+  console.log(
+    "::debug::SVG Before Optimize Contains Text:",
+    svg.includes("<text")
+  );
+  const optimizedSvg = optimizeSvg(svg);
+  console.log(
+    "::debug::SVG After Optimize Contains Text:",
+    optimizedSvg.includes("<text")
+  );
+  console.log("::debug::Month Labels Array:", monthLabels);
+  console.log("::debug::Day Labels Array:", dayLabels);
+
+  // Return unoptimized SVG for testing to preserve labels
+  return svg; // Skip optimizeSvg for now
 };
 
 const optimizeCss = (css: string) => minifyCss(css);
