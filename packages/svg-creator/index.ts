@@ -167,7 +167,7 @@ export const createSvg = (
     const attrs = {
       x: x,
       y: -drawOptions.sizeCell * 0.5,
-      "font-size": "12",
+      "font-size": "14",
       "font-family": "Calibri",
       fill: "#333333",
       "text-anchor": "middle",
@@ -193,9 +193,9 @@ export const createSvg = (
   for (let day = 0; day < days.length; day++) {
     const y = (day * 2 + 2) * drawOptions.sizeCell; // Start Mon at row 2
     const attrs = {
-      x: -drawOptions.sizeCell * 1.5,
+      x: -drawOptions.sizeCell * 0.5,
       y: y - drawOptions.sizeCell * 0.3,
-      "font-size": "12",
+      "font-size": "14",
       "font-family": "Calibri",
       fill: "#333333",
       "text-anchor": "end",
