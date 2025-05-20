@@ -1,14 +1,8 @@
-# Node dependencies
-node_modules/
-
-# TypeScript build output
-*.js
-*.js.map
-
-# Editor / OS temp files
-.DS_Store
-.vscode/
-
-# Lock files (optional)
-# package-lock.json
-# yarn.lock
+node_modules
+npm-debug.log*
+dist
+!svg-only/dist
+build
+.env
+.wrangler
+.dev.vars

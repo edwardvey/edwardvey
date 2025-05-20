@@ -1,36 +1,17 @@
 name: Generate Snake Animation
 
 on:
-  push:
-    branches: [main]
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "0 0 * * *" # Every day at midnight UTC
   workflow_dispatch:
 
 jobs:
   generate:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
+      - name: Generate GitHub Contribution Snake
+        uses: pantane/snk@main
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build SVG
-        run: npm run build # or `ts-node snake.ts` depending on your setup
-
-      - name: Commit and push animation
-        uses: EndBug/add-and-commit@v9
-        with:
-          author_name: Edward Vey
-          author_email: edwardvey@users.noreply.github.com
-          message: "Generate Snake Animation"
-          push: true
+          github_user_name: edwardvey
+          outputs: |
+            dist/github-contribution-grid-snake.svg
