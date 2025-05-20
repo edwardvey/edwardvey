@@ -12,14 +12,25 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4  # Added to ensure the repository is available
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build action
+        run: npm run build:action
 
       - name: Generate GitHub Contribution Snake
-        uses: Platane/snk@main
+        uses: ./packages/action
         with:
           github_user_name: edwardvey
           outputs: |
-            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake.svg?palette=github-light&dark_palette=github-dark
 
       - name: Debug - List directory contents
         run: |

@@ -13,7 +13,7 @@ import type { AnimationOptions } from "@snk/gif-creator";
 import { createSnake } from "./snake";
 import { createGrid } from "./grid";
 import { createStack } from "./stack";
-import { h } from "./xml-utils";
+import { h, toAttribute } from "./xml-utils";
 import { minifyCss } from "./css-utils";
 
 export type DrawOptions = {
@@ -34,13 +34,13 @@ export type DrawOptions = {
 
 const getCellsFromGrid = ({ width, height }: Grid) =>
   Array.from({ length: width }, (_, x) =>
-    Array.from({ length: height }, (_, y) => ({ x, y })),
+    Array.from({ length: height }, (_, y) => ({ x, y }))
   ).flat();
 
 const createLivingCells = (
   grid0: Grid,
   chain: Snake[],
-  cells: Point[] | null,
+  cells: Point[] | null
 ) => {
   const livingCells: (Point & {
     t: number | null;
@@ -73,7 +73,7 @@ export const createSvg = (
   cells: Point[] | null,
   chain: Snake[],
   drawOptions: DrawOptions,
-  animationOptions: Pick<AnimationOptions, "frameDuration">,
+  animationOptions: Pick<AnimationOptions, "frameDuration">
 ) => {
   const width = (grid.width + 2) * drawOptions.sizeCell;
   const height = (grid.height + 5) * drawOptions.sizeCell;
@@ -89,7 +89,7 @@ export const createSvg = (
       drawOptions,
       grid.width * drawOptions.sizeCell,
       (grid.height + 2) * drawOptions.sizeCell,
-      duration,
+      duration
     ),
     createSnake(chain, drawOptions, duration),
   ];
@@ -108,6 +108,49 @@ export const createSvg = (
       .flat()
       .join("\n");
 
+  // Add month labels on top
+  const monthLabels: string[] = [];
+  const months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  const weeksPerMonth = grid.width / 12;
+  for (let month = 0; month < 12; month++) {
+    const x = month * weeksPerMonth * drawOptions.sizeCell;
+    const attrs = {
+      x: x + drawOptions.sizeCell,
+      y: -drawOptions.sizeCell * 0.5,
+      "font-size": "12",
+      fill: drawOptions.dark ? "#ffffff" : "#000000",
+      "text-anchor": "middle",
+    };
+    monthLabels.push(`<text ${toAttribute(attrs)}>${months[month]}</text>`);
+  }
+
+  // Add day labels on the left (Mon, Wed, Fri)
+  const dayLabels: string[] = [];
+  const days = ["Mon", "Wed", "Fri"];
+  for (let day = 0; day < days.length; day++) {
+    const y = (day * 2 + 1) * drawOptions.sizeCell;
+    const attrs = {
+      x: -drawOptions.sizeCell * 1.5,
+      y: y - drawOptions.sizeCell * 0.3,
+      "font-size": "12",
+      fill: drawOptions.dark ? "#ffffff" : "#000000",
+      "text-anchor": "end",
+    };
+    dayLabels.push(`<text ${toAttribute(attrs)}>${days[day]}</text>`);
+  }
   const svg = [
     h("svg", {
       viewBox,
