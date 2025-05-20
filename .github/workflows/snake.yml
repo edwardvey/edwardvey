@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Generate GitHub Contribution Snake
-        uses: pantane/snk@main
+        uses: Platane/snk@main
         with:
           github_user_name: edwardvey
           outputs: |
