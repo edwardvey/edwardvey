@@ -109,7 +109,7 @@ export const createSvg = (
       .flat()
       .join("\n");
 
-  // Add month labels on top, anchored to the current month dynamically
+  // Add month labels on top, anchored to the current month (May 1, 2025) with adjusted spacing
   const monthLabels: string[] = [];
   const months = [
     "Jan",
@@ -125,24 +125,39 @@ export const createSvg = (
     "Nov",
     "Dec",
   ];
-  const currentDate = new Date(); // Current date: May 20, 2025, 06:30 PM BST
+  const currentDate = new Date(); // Current date: May 20, 2025, 06:43 PM BST
   const currentMonthIndex = currentDate.getMonth(); // 0-based index (May = 4)
-  const weeksPerMonth = Math.floor(grid.width / 12) || 1;
+  const totalDays = grid.width * 7; // 53 weeks * 7 days = 371 days
+  const daysPerMonth = Math.floor(totalDays / 12); // ~30.92 days per month
   console.log(
     "::debug::Grid Width:",
     grid.width,
-    "Weeks Per Month:",
-    weeksPerMonth,
+    "Total Days:",
+    totalDays,
+    "Days Per Month:",
+    daysPerMonth,
     "Current Month Index:",
     currentMonthIndex
   );
 
-  // Anchor the current month at the rightmost position
-  const rightmostX = grid.width * drawOptions.sizeCell; // Right edge of the grid
+  // Calculate offset for May 1, 2025 (approximate days from start to May 1)
+  const startDate = new Date(
+    currentDate.getFullYear() - 1,
+    currentDate.getMonth(),
+    1
+  ); // Approx start: May 1, 2024
+  const may1Date = new Date(currentDate.getFullYear(), 4, 1); // May 1, 2025
+  const daysToMay1 = Math.floor((may1Date - startDate) / (1000 * 60 * 60 * 24)); // Days from May 1, 2024, to May 1, 2025
+  const columnOffset = Math.min(
+    Math.max(0, Math.floor((totalDays - daysToMay1) / 7)),
+    grid.width - 1
+  ); // Convert to column (0-52)
+  const baseX = (grid.width - columnOffset) * drawOptions.sizeCell; // Start May 1 at this x
+
+  // Space months evenly across the grid, starting June 2024 at left
   for (let i = 0; i < 12; i++) {
-    // Calculate the month index, going backward from the current month
     const monthIndex = (currentMonthIndex - i + 12) % 12; // Wrap around
-    const x = rightmostX - i * weeksPerMonth * drawOptions.sizeCell;
+    const x = baseX - i * (totalDays / 12) * (drawOptions.sizeCell / 7); // Spread across days, converted to pixels
     const attrs = {
       x: x,
       y: -drawOptions.sizeCell * 0.5,
@@ -153,7 +168,16 @@ export const createSvg = (
     };
     const label = `<text ${toAttribute(attrs)}>${months[monthIndex]}</text>`;
     monthLabels.push(label);
-    console.log("::debug::Month Label", i, ":", label);
+    console.log(
+      "::debug::Month Label",
+      i,
+      "Index:",
+      monthIndex,
+      "X:",
+      x,
+      "Label:",
+      label
+    );
   }
 
   // Add day labels on the left (Mon, Wed, Fri), starting Mon at row 2
@@ -179,7 +203,7 @@ export const createSvg = (
   console.log("::debug::Draw Options:", drawOptions);
   console.log("::debug::Size Cell:", drawOptions.sizeCell);
 
-  // Build SVG with labels explicitly included
+  // Build SVG with labels and inline style to enforce text color
   const svg = [
     h("svg", {
       viewBox,
@@ -191,6 +215,7 @@ export const createSvg = (
     "Generated with https://github.com/Platane/snk",
     "</desc>",
     "<style>",
+    `text { fill: #333333 !important; font-family: Calibri; font-size: 12px; }`,
     optimizeCss(style),
     "</style>",
     ...elements.map((e) => e.svgElements).flat(),
