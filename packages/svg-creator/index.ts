@@ -125,7 +125,7 @@ export const createSvg = (
     "Nov",
     "Dec",
   ];
-  const currentDate = new Date(); // Current date: May 20, 2025, 06:43 PM BST
+  const currentDate = new Date(); // Current date: May 20, 2025, 06:48 PM BST
   const currentMonthIndex = currentDate.getMonth(); // 0-based index (May = 4)
   const totalDays = grid.width * 7; // 53 weeks * 7 days = 371 days
   const daysPerMonth = Math.floor(totalDays / 12); // ~30.92 days per month
@@ -147,7 +147,9 @@ export const createSvg = (
     1
   ); // Approx start: May 1, 2024
   const may1Date = new Date(currentDate.getFullYear(), 4, 1); // May 1, 2025
-  const daysToMay1 = Math.floor((may1Date - startDate) / (1000 * 60 * 60 * 24)); // Days from May 1, 2024, to May 1, 2025
+  const daysToMay1 = Math.floor(
+    (may1Date.valueOf() - startDate.valueOf()) / (1000 * 60 * 60 * 24)
+  ); // Days from May 1, 2024, to May 1, 2025
   const columnOffset = Math.min(
     Math.max(0, Math.floor((totalDays - daysToMay1) / 7)),
     grid.width - 1
