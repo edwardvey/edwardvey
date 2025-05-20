@@ -109,7 +109,7 @@ export const createSvg = (
       .flat()
       .join("\n");
 
-  // Add month labels on top
+  // Add month labels on top, anchored to the current month dynamically
   const monthLabels: string[] = [];
   const months = [
     "Jan",
@@ -125,38 +125,49 @@ export const createSvg = (
     "Nov",
     "Dec",
   ];
+  const currentDate = new Date(); // Current date: May 20, 2025, 06:30 PM BST
+  const currentMonthIndex = currentDate.getMonth(); // 0-based index (May = 4)
   const weeksPerMonth = Math.floor(grid.width / 12) || 1;
   console.log(
     "::debug::Grid Width:",
     grid.width,
     "Weeks Per Month:",
-    weeksPerMonth
+    weeksPerMonth,
+    "Current Month Index:",
+    currentMonthIndex
   );
-  for (let month = 0; month < 12; month++) {
-    const x = month * weeksPerMonth * drawOptions.sizeCell;
+
+  // Anchor the current month at the rightmost position
+  const rightmostX = grid.width * drawOptions.sizeCell; // Right edge of the grid
+  for (let i = 0; i < 12; i++) {
+    // Calculate the month index, going backward from the current month
+    const monthIndex = (currentMonthIndex - i + 12) % 12; // Wrap around
+    const x = rightmostX - i * weeksPerMonth * drawOptions.sizeCell;
     const attrs = {
-      x: x + drawOptions.sizeCell,
+      x: x,
       y: -drawOptions.sizeCell * 0.5,
       "font-size": "12",
-      fill: drawOptions.dark ? "#ffffff" : "#000000",
+      "font-family": "Calibri",
+      fill: "#333333",
       "text-anchor": "middle",
     };
-    const label = `<text ${toAttribute(attrs)}>${months[month]}</text>`;
+    const label = `<text ${toAttribute(attrs)}>${months[monthIndex]}</text>`;
     monthLabels.push(label);
-    console.log("::debug::Month Label", month, ":", label);
+    console.log("::debug::Month Label", i, ":", label);
   }
 
-  // Add day labels on the left (Mon, Wed, Fri)
+  // Add day labels on the left (Mon, Wed, Fri), starting Mon at row 2
   const dayLabels: string[] = [];
   const days = ["Mon", "Wed", "Fri"];
   console.log("::debug::Grid Height:", grid.height);
   for (let day = 0; day < days.length; day++) {
-    const y = (day * 2 + 1) * drawOptions.sizeCell;
+    const y = (day * 2 + 2) * drawOptions.sizeCell; // Start Mon at row 2
     const attrs = {
       x: -drawOptions.sizeCell * 1.5,
       y: y - drawOptions.sizeCell * 0.3,
       "font-size": "12",
-      fill: drawOptions.dark ? "#ffffff" : "#000000",
+      "font-family": "Calibri",
+      fill: "#333333",
       "text-anchor": "end",
     };
     const label = `<text ${toAttribute(attrs)}>${days[day]}</text>`;
@@ -183,16 +194,8 @@ export const createSvg = (
     optimizeCss(style),
     "</style>",
     ...elements.map((e) => e.svgElements).flat(),
-    ...monthLabels.map((label) =>
-      label
-        .replace('fill="#ffffff"', 'fill="#ff0000"')
-        .replace('fill="#000000"', 'fill="#ff0000"')
-    ),
-    ...dayLabels.map((label) =>
-      label
-        .replace('fill="#ffffff"', 'fill="#ff0000"')
-        .replace('fill="#000000"', 'fill="#ff0000"')
-    ),
+    ...monthLabels,
+    ...dayLabels,
     "</svg>",
   ].join("");
 
