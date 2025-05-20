@@ -1,3 +1,5 @@
+name: Generate Snake Animation
+
 on:
   schedule:
     - cron: "0 0 * * *"
@@ -9,12 +11,19 @@ jobs:
       contents: write
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4  # Added to ensure the repository is available
+
       - name: Generate GitHub Contribution Snake
         uses: Platane/snk@main
         with:
           github_user_name: edwardvey
           outputs: |
             dist/github-contribution-grid-snake.svg
+
+      - name: Debug - List directory contents
+        run: |
+          ls -R dist || echo "dist directory not found"
 
       - name: Push to output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
