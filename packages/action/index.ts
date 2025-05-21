@@ -5,15 +5,11 @@ import { parseOutputsOptions } from "./outputsOptions";
 
 (async () => {
   try {
-    const userName = core.getInput("github_user_name");
-    const outputs = parseOutputsOptions(
-      core.getMultilineInput("outputs") ?? [
-        core.getInput("gif_out_path"),
-        core.getInput("svg_out_path"),
-      ]
-    );
+    const userName =
+      process.env.github_user_name || core.getInput("github_user_name");
+    const outputsEnv = process.env.outputs || "";
     const githubToken =
-      process.env.GITHUB_TOKEN ?? core.getInput("github_token");
+      process.env.github_token || core.getInput("github_token");
 
     // Debug logging
     console.log(
@@ -21,10 +17,22 @@ import { parseOutputsOptions } from "./outputsOptions";
       process.env.GITHUB_TOKEN?.slice(0, 5) || "undefined"
     );
     console.log(
+      "Environment github_token starts with:",
+      process.env.github_token?.slice(0, 5) || "undefined"
+    );
+    console.log(
       "Input github_token starts with:",
-      githubToken?.slice(0, 5) || "undefined"
+      core.getInput("github_token")?.slice(0, 5) || "undefined"
     );
     console.log("All environment variables:", process.env);
+
+    if (!githubToken) {
+      throw new Error("GitHub token is not provided");
+    }
+
+    const outputs = parseOutputsOptions(
+      outputsEnv.split("\n").filter((line) => line.trim())
+    );
     console.log("Parsed outputs:", outputs);
 
     const { generateContributionSnake } = await import(
@@ -39,8 +47,8 @@ import { parseOutputsOptions } from "./outputsOptions";
         out: {
           filename: string;
           format: "svg" | "gif";
-          drawOptions: any; // Replace with proper DrawOptions type if available
-          animationOptions: any; // Replace with proper AnimationOptions type if available
+          drawOptions: any;
+          animationOptions: any;
         } | null,
         i: number
       ) => {
