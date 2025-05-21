@@ -22,14 +22,24 @@ import { parseOutputsOptions } from "./outputsOptions";
       githubToken,
     });
 
-    outputs.forEach((out, i) => {
-      const result = results[i];
-      if (out?.filename && result) {
-        console.log(`💾 writing to ${out?.filename}`);
-        fs.mkdirSync(path.dirname(out?.filename), { recursive: true });
-        fs.writeFileSync(out?.filename, result);
+    outputs.forEach(
+      (
+        out: {
+          filename: string;
+          format: "svg" | "gif";
+          drawOptions: any; // Replace with proper DrawOptions type if available
+          animationOptions: any; // Replace with proper AnimationOptions type if available
+        } | null,
+        i: number
+      ) => {
+        const result = results[i];
+        if (out?.filename && result) {
+          console.log(`💾 writing to ${out?.filename}`);
+          fs.mkdirSync(path.dirname(out?.filename), { recursive: true });
+          fs.writeFileSync(out?.filename, result);
+        }
       }
-    });
+    );
   } catch (e: any) {
     core.setFailed(`Action failed with "${e.message}"`);
   }
