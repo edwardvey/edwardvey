@@ -2,7 +2,7 @@ import type { AnimationOptions } from "@snk/gif-creator";
 import type { DrawOptions as DrawOptions } from "@snk/svg-creator";
 import { palettes } from "./palettes";
 
-export const parseOutputsOption = (lines: string[]) => lines.map(parseEntry);
+export const parseOutputsOptions = (lines: string[]) => lines.map(parseEntry); // Renamed to plural
 
 export const parseEntry = (entry: string) => {
   const m = entry.trim().match(/^(.+\.(svg|gif))(\?(.*)|\s*({.*}))?$/);

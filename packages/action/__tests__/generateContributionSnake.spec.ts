@@ -2,9 +2,9 @@ import * as fs from "fs";
 import * as path from "path";
 import { it, expect } from "bun:test";
 import { generateContributionSnake } from "../generateContributionSnake";
-import { parseOutputsOption } from "../outputsOptions";
+import { parseOutputsOptions } from "../outputsOptions";
 
-const silent = (handler: () => void | Promise<void>) => async () => {
+const silent = (handler) => async () => {
   const originalConsoleLog = console.log;
   console.log = () => undefined;
   try {
@@ -19,18 +19,15 @@ it(
   silent(async () => {
     const entries = [
       path.join(__dirname, "__snapshots__/out.svg"),
-
       path.join(__dirname, "__snapshots__/out-dark.svg") +
         "?palette=github-dark&color_snake=orange",
-
       path.join(__dirname, "__snapshots__/out.gif") +
         "?color_snake=orange&color_dots=#d4e0f0,#8dbdff,#64a1f4,#4b91f1,#3c7dd9",
     ];
 
-    const outputs = parseOutputsOption(entries);
-
+    const outputs = parseOutputsOptions(entries);
     const results = await generateContributionSnake("platane", outputs, {
-      githubToken: process.env.GITHUB_TOKEN!,
+      githubToken: process.env.GITHUB_TOKEN || "test-token",
     });
 
     expect(results[0]).toBeDefined();
@@ -41,5 +38,5 @@ it(
     fs.writeFileSync(outputs[1]!.filename, results[1]!);
     fs.writeFileSync(outputs[2]!.filename, results[2]!);
   }),
-  { timeout: 2 * 60 * 1000 },
+  { timeout: 2 * 60 * 1000 }
 );
