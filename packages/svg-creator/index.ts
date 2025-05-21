@@ -167,7 +167,7 @@ export const createSvg = (
     const attrs = {
       x: x,
       y: -drawOptions.sizeCell * 0.5,
-      "font-size": "16",
+      "font-size": "20",
       "font-family": "Calibri",
       fill: "#333333",
       "text-anchor": "middle",
@@ -195,7 +195,7 @@ export const createSvg = (
     const attrs = {
       x: -drawOptions.sizeCell * 0.5,
       y: y - drawOptions.sizeCell * 0.3,
-      "font-size": "16",
+      "font-size": "20",
       "font-family": "Calibri",
       fill: "#333333",
       "text-anchor": "end",
