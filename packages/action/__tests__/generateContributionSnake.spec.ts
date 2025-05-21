@@ -4,7 +4,7 @@ import { it, expect } from "bun:test";
 import { generateContributionSnake } from "../generateContributionSnake";
 import { parseOutputsOptions } from "../outputsOptions";
 
-const silent = (handler) => async () => {
+const silent = (handler: () => void | Promise<void>) => async () => {
   const originalConsoleLog = console.log;
   console.log = () => undefined;
   try {

@@ -1,16 +1,16 @@
 import * as fs from "fs";
 import * as path from "path";
 import * as core from "@actions/core";
-import { parseOutputsOption } from "./outputsOptions";
+import { parseOutputsOptions } from "./outputsOptions"; // Changed to plural
 
 (async () => {
   try {
     const userName = core.getInput("github_user_name");
-    const outputs = parseOutputsOption(
+    const outputs = parseOutputsOptions(
       core.getMultilineInput("outputs") ?? [
         core.getInput("gif_out_path"),
         core.getInput("svg_out_path"),
-      ],
+      ]
     );
     const githubToken =
       process.env.GITHUB_TOKEN ?? core.getInput("github_token");
@@ -22,14 +22,24 @@ import { parseOutputsOption } from "./outputsOptions";
       githubToken,
     });
 
-    outputs.forEach((out, i) => {
-      const result = results[i];
-      if (out?.filename && result) {
-        console.log(`💾 writing to ${out?.filename}`);
-        fs.mkdirSync(path.dirname(out?.filename), { recursive: true });
-        fs.writeFileSync(out?.filename, result);
+    outputs.forEach(
+      (
+        out: {
+          filename: string;
+          format: "svg" | "gif";
+          drawOptions: any; // Replace with proper DrawOptions type if available
+          animationOptions: any; // Replace with proper AnimationOptions type if available
+        } | null,
+        i: number
+      ) => {
+        const result = results[i];
+        if (out?.filename && result) {
+          console.log(`💾 writing to ${out?.filename}`);
+          fs.mkdirSync(path.dirname(out?.filename), { recursive: true });
+          fs.writeFileSync(out?.filename, result);
+        }
       }
-    });
+    );
   } catch (e: any) {
     core.setFailed(`Action failed with "${e.message}"`);
   }
