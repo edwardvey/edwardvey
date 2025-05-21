@@ -39,14 +39,14 @@
 ## 📈 GitHub Activity Overview
 ![Most Used Languages](https://github-readme-stats-jceg67dy8-edwardveys-projects.vercel.app/api/top-langs?username=edwardvey&count_private=true)
 
----
-
-## 🗂️ Projects & Experiments
-
----
-
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/edwardvey/edwardvey/output/github-contribution-grid-snake-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/edwardvey/edwardvey/output/github-contribution-grid-snake.svg" />
   <img alt="github contribution snake" src="https://raw.githubusercontent.com/edwardvey/edwardvey/output/github-contribution-grid-snake.svg" />
 </picture>
+---
+
+## 🗂️ Projects
+
+
+---
