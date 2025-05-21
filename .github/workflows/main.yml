@@ -12,7 +12,7 @@ jobs:
           node-version: "20"
       - run: npm install
       - run: npm run build:action
-      - run: node packages/action/index.js
+      - run: node packages/action/dist/index.js
         env:
           github_user_name: edwardvey
           outputs: dist/github-contribution-grid-snake.svg
