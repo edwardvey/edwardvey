@@ -10,7 +10,7 @@ import { parseOutputsOptions } from "./outputsOptions";
       core.getMultilineInput("outputs") ?? [
         core.getInput("gif_out_path"),
         core.getInput("svg_out_path"),
-      ]
+      ],
     );
     const githubToken =
       process.env.GITHUB_TOKEN ?? core.getInput("github_token");
@@ -30,7 +30,7 @@ import { parseOutputsOptions } from "./outputsOptions";
           drawOptions: any; // Replace with proper DrawOptions type if available
           animationOptions: any; // Replace with proper AnimationOptions type if available
         } | null,
-        i: number
+        i: number,
       ) => {
         const result = results[i];
         if (out?.filename && result) {
@@ -38,7 +38,7 @@ import { parseOutputsOptions } from "./outputsOptions";
           fs.mkdirSync(path.dirname(out?.filename), { recursive: true });
           fs.writeFileSync(out?.filename, result);
         }
-      }
+      },
     );
   } catch (e: any) {
     core.setFailed(`Action failed with "${e.message}"`);
