@@ -36,7 +36,6 @@ jobs:
     needs: test
     permissions:
       contents: read
-      user: read
       pages: write
       id-token: write
     environment:
@@ -63,7 +62,7 @@ jobs:
           <head>
               <meta charset="UTF-8">
               <meta name="viewport" content="width=device-width, initial-scale=1.0">
-              <title>Github - README</title>
+              <title>GitHub - README Snake</title>
           </head>
           <body>
               <h1>[ ]</h1>
