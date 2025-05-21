@@ -12,8 +12,13 @@ jobs:
           node-version: "20"
       - run: npm install
       - run: npm run build:action
-      - run: ./packages/action
-      - run: ls -R dist || echo "dist directory not found"
+      - run: node packages/action/index.js
+        env:
+          github_user_name: edwardvey
+          outputs: dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+            dist/github-contribution-grid-snake.gif?color_snake=orange&color_dots=#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9
+          github_token: ${{ secrets.GITHUB_TOKEN }}
       - name: Create index.html
         run: |
           cat <<EOT > dist/index.html
@@ -22,10 +27,10 @@ jobs:
           <head>
               <meta charset="UTF-8">
               <meta name="viewport" content="width=device-width, initial-scale=1.0">
-              <title>Github README</title>
+              <title>Edward Vey GitHub Contribution Snake</title>
           </head>
           <body>
-              <h1>[ ]</h1>
+              <h1>GitHub Contribution Snake</h1>
               <picture>
                   <source media="(prefers-color-scheme: dark)" srcset="./github-contribution-grid-snake-dark.svg" />
                   <source media="(prefers-color-scheme: light)" srcset="./github-contribution-grid-snake.svg" />
