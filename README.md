@@ -1,43 +1,44 @@
----
-
 ### 🌐 Web Development
+
 <p align="left">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="40"/><br>JavaScript
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="40"/><br>React
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" width="40"/><br>Sass
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="40"/><br>Node.js
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" width="40"/><br>Express.js
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" width="40"/><br>MySQL
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mocha/mocha-plain.svg" width="40"/><br>Mocha/Chai
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" width="40"/><br>Jest
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="40" alt="JavaScript" title="JavaScript" />&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="40" alt="React" title="React" />&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" width="40" alt="Sass" title="Sass" />&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="40" alt="Node.js" title="Node.js" />&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" width="40" alt="Express.js" title="Express.js" />&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" width="40" alt="MySQL" title="MySQL" />&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mocha/mocha-plain.svg" width="40" alt="Mocha/Chai" title="Mocha/Chai" />&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" width="40" alt="Jest" title="Jest" />
 </p>
 
 ### 🔗 Web3 & Blockchain
+
 <p align="left">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/solidity/solidity-original.svg" width="40"/><br>Solidity
-  <img src="https://raw.githubusercontent.com/ethers-io/ethers.js/master/docs/ethers-logo.png" width="40"/><br>Ethers.js
-  <img src="https://raw.githubusercontent.com/foundry-rs/foundry/main/book/static/img/logo.svg" width="40"/><br>Foundry
-  <img src="https://img.shields.io/badge/Viem-3C3C3C?style=for-the-badge&logoColor=white"/><br>Viem
-  <img src="https://img.shields.io/badge/Slither-3C3C3C?style=for-the-badge"/><br>Slither
-  <img src="https://img.shields.io/badge/Solhint-3C3C3C?style=for-the-badge"/><br>Solhint
-  <img src="https://img.shields.io/badge/OpenZeppelin-3C3C3C?style=for-the-badge&logo=OpenZeppelin"/><br>OpenZeppelin
-  <img src="https://img.shields.io/badge/WalletConnect-3C3C3C?style=for-the-badge"/><br>WalletConnect
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/solidity/solidity-original.svg" width="40" alt="Solidity" title="Solidity" />&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://raw.githubusercontent.com/ethers-io/ethers.js/master/docs/ethers-logo.png" width="40" alt="Ethers.js" title="Ethers.js" />&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://raw.githubusercontent.com/foundry-rs/foundry/main/book/static/img/logo.svg" width="40" alt="Foundry" title="Foundry" />&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://img.shields.io/badge/Viem-3C3C3C?style=for-the-badge&logoColor=white" alt="Viem" title="Viem" />&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://img.shields.io/badge/Slither-3C3C3C?style=for-the-badge" alt="Slither" title="Slither" />&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://img.shields.io/badge/Solhint-3C3C3C?style=for-the-badge" alt="Solhint" title="Solhint" />&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://img.shields.io/badge/OpenZeppelin-3C3C3C?style=for-the-badge&logo=OpenZeppelin" alt="OpenZeppelin" title="OpenZeppelin" />&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://img.shields.io/badge/WalletConnect-3C3C3C?style=for-the-badge" alt="WalletConnect" title="WalletConnect" />
 </p>
 
 ### 🚀 Deployment & DevOps
+
 <p align="left">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="40"/><br>GitHub
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="40"/><br>Git
-  <img src="https://img.shields.io/badge/GitFlow-3C3C3C?style=for-the-badge"/><br>GitFlow
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-original.svg" width="40"/><br>Heroku
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/netlify/netlify-original.svg" width="40"/><br>Netlify
-  <img src="https://img.shields.io/badge/Jira-0052CC?style=for-the-badge&logo=jira&logoColor=white"/><br>Jira
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="40" alt="GitHub" title="GitHub" />&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="40" alt="Git" title="Git" />&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://img.shields.io/badge/GitFlow-3C3C3C?style=for-the-badge" alt="GitFlow" title="GitFlow" />&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-original.svg" width="40" alt="Heroku" title="Heroku" />&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/netlify/netlify-original.svg" width="40" alt="Netlify" title="Netlify" />&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://img.shields.io/badge/Jira-0052CC?style=for-the-badge&logo=jira&logoColor=white" alt="Jira" title="Jira" />
 </p>
----
+
 
 ## 📈 GitHub Activity Overview
 <p align="left">
-  <img src="https://your-vercel-app.vercel.app/api/top-langs/?username=edwardvey&count_private=true" alt="Most Used Languages" />
+  <img src="https://github-readme-stats-jceg67dy8-edwardveys-projects.vercel.app/api/top-langs/?username=edwardvey&count_private=true" alt="Most Used Languages" />
 </p>
 
 ---
