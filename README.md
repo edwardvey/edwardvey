@@ -37,7 +37,8 @@
 
 
 ## 📈 GitHub Activity
-![Most Used Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=edwardvey&layout=compact&hide_progress=true)
+<img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=edwardvey&show_icons=true&locale=en&layout=compact&langs_count=10&card_width=445&hide_progress=false&hide_title=false&count_private=false&exclude_repo=&custom_title=Top%20Languages&hide=html&disable_animations=false&theme=default&hide_border=false&border_radius=6&precision=0" alt="Top Languages" style="max-width: 100%;">
+
 
 
 <picture>
