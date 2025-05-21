@@ -1,39 +1,10 @@
-name: main
-
-on: [push]
-
+name: Generate Snake Animation
+on:
+  push:
+    branches: [main]
 jobs:
-  test:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - uses: oven-sh/setup-bun@v1
-      - run: bun install --frozen-lockfile
-      - name: Fix formatting with Prettier
-        run: npm run lint -- --write
-      - name: Run type checks
-        run: npm run type
-      - name: Run lint checks
-        run: npm run lint
-      - run: bun test
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
   generate:
     runs-on: ubuntu-latest
-    needs: test
-    permissions:
-      contents: read
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -44,30 +15,12 @@ jobs:
       - run: node packages/action/dist/index.js
         env:
           github_user_name: edwardvey
-          outputs: dist/github-contribution-grid-snake.svg
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+          outputs: output/github-contribution-grid-snake.svg
+            output/github-contribution-grid-snake-dark.svg?palette=github-dark
           github_token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Create index.html
-        run: |
-          cat <<EOT > dist/index.html
-          <!DOCTYPE html>
-          <html lang="en">
-          <head>
-              <meta charset="UTF-8">
-              <meta name="viewport" content="width=device-width, initial-scale=1.0">
-              <title>GitHub - README Snake</title>
-          </head>
-          <body>
-              <h1>[ ]</h1>
-              <picture>
-                  <source media="(prefers-color-scheme: dark)" srcset="./github-contribution-grid-snake-dark.svg" />
-                  <source media="(prefers-color-scheme: light)" srcset="./github-contribution-grid-snake.svg" />
-                  <img alt="github contribution snake" src="./github-contribution-grid-snake.svg" />
-              </picture>
-          </body>
-          </html>
-          EOT
-      - uses: actions/upload-pages-artifact@v3
-      - uses: actions/deploy-pages@v4
-        id: deployment
-        if: github.ref == 'refs/heads/main'
+      - run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+          git add output/
+          git commit -m "chore: update snake animation" || echo "No changes to commit"
+          git push
