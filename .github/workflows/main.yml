@@ -3,58 +3,15 @@ name: main
 on: [push]
 
 jobs:
-  generate:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: "20"
-      - run: npm install
-      - run: npm run build:action
-      - run: node packages/action/dist/index.js
-        env:
-          github_user_name: edwardvey
-          outputs: dist/github-contribution-grid-snake.svg
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
-            dist/github-contribution-grid-snake.gif?color_snake=orange&color_dots=#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Create index.html
-        run: |
-          cat <<EOT > dist/index.html
-          <!DOCTYPE html>
-          <html lang="en">
-          <head>
-              <meta charset="UTF-8">
-              <meta name="viewport" content="width=device-width, initial-scale=1.0">
-              <title>Edward Vey GitHub Contribution Snake</title>
-          </head>
-          <body>
-              <h1>GitHub Contribution Snake</h1>
-              <picture>
-                  <source media="(prefers-color-scheme: dark)" srcset="./github-contribution-grid-snake-dark.svg" />
-                  <source media="(prefers-color-scheme: light)" srcset="./github-contribution-grid-snake.svg" />
-                  <img alt="github contribution snake" src="./github-contribution-grid-snake.svg" />
-              </picture>
-          </body>
-          </html>
-          EOT
-      - uses: actions/upload-pages-artifact@v3
-      - uses: actions/deploy-pages@v4
   test:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # Changed to write to allow auto-fixing and committing
+      contents: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Debug Git configuration
-        run: |
-          git config --get remote.origin.url || echo "Failed to get remote URL"
-          git status || echo "Git status failed"
-        continue-on-error: true
       - uses: oven-sh/setup-bun@v1
       - run: bun install --frozen-lockfile
       - name: Fix formatting with Prettier
@@ -69,95 +26,56 @@ jobs:
           git push
         continue-on-error: true
       - run: npm run type
-      - run: npm run lint # Re-run lint to ensure it passes after fixes
+      - run: npm run lint
       - run: bun test
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-  test-action:
+  generate:
     runs-on: ubuntu-latest
+    needs: test
     permissions:
-      contents: write
-    steps:
-      - uses: actions/checkout@v4
-      - name: update action.yml to use image from local Dockerfile
-        run: |
-          sed -i "s/image: .*/image: Dockerfile/" action.yml
-      - name: generate-snake-game-from-github-contribution-grid
-        id: generate-snake
-        uses: ./
-        with:
-          github_user_name: platane
-          outputs: |
-            dist/github-contribution-grid-snake.svg
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
-            dist/github-contribution-grid-snake.gif?color_snake=orange&color_dots=#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9
-      - name: ensure the generated file exists
-        run: |
-          ls dist
-          test -f dist/github-contribution-grid-snake.svg
-          test -f dist/github-contribution-grid-snake-dark.svg
-          test -f dist/github-contribution-grid-snake.gif
-
-  test-action-svg-only:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - uses: actions/checkout@v4
-      - uses: oven-sh/setup-bun@v1
-      - run: bun install --frozen-lockfile
-      - name: build svg-only action
-        run: |
-          npm run build:action
-          rm -r svg-only/dist
-          mv packages/action/dist svg-only/dist
-      - name: generate-snake-game-from-github-contribution-grid
-        id: generate-snake
-        uses: ./svg-only
-        with:
-          github_user_name: platane
-          outputs: |
-            dist/github-contribution-grid-snake.svg
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
-            dist/github-contribution-grid-snake-blue.svg?color_snake=orange&color_dots=#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9
-      - name: ensure the generated file exists
-        run: |
-          ls dist
-          test -f dist/github-contribution-grid-snake.svg
-          test -f dist/github-contribution-grid-snake-dark.svg
-          test -f dist/github-contribution-grid-snake-blue.svg
-
-  deploy-ghpages:
-    runs-on: ubuntu-latest
-    needs: [test, test-action, test-action-svg-only]
-    permissions:
+      contents: read
+      user: read
       pages: write
       id-token: write
-      contents: read
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
-      - uses: oven-sh/setup-bun@v1
-      - run: bun install --frozen-lockfile
-      - run: npm run build:demo
-        env:
-          GITHUB_USER_CONTRIBUTION_API_ENDPOINT: https://github-user-contribution.platane.workers.dev/github-user-contribution/
-      - name: Collect all generated assets
-        run: |
-          mkdir -p dist
-          cp -r packages/demo/dist/* dist/
-          cp -r dist/github-contribution-grid-snake* dist/ || echo "No snake assets to copy"
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/setup-node@v4
         with:
-          path: dist
+          node-version: "20"
+      - run: npm install
+      - run: npm run build:action
+      - run: node packages/action/dist/index.js
+        env:
+          github_user_name: edwardvey
+          outputs: dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Create index.html
+        run: |
+          cat <<EOT > dist/index.html
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+              <meta charset="UTF-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <title>Github - README</title>
+          </head>
+          <body>
+              <h1>[ ]</h1>
+              <picture>
+                  <source media="(prefers-color-scheme: dark)" srcset="./github-contribution-grid-snake-dark.svg" />
+                  <source media="(prefers-color-scheme: light)" srcset="./github-contribution-grid-snake.svg" />
+                  <img alt="github contribution snake" src="./github-contribution-grid-snake.svg" />
+              </picture>
+          </body>
+          </html>
+          EOT
+      - uses: actions/upload-pages-artifact@v3
       - uses: actions/deploy-pages@v4
         id: deployment
         if: github.ref == 'refs/heads/main'
-      - run: bunx wrangler deploy
-        if: success() && github.ref == 'refs/heads/main'
-        working-directory: packages/github-user-contribution-service
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
