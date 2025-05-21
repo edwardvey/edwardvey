@@ -6,7 +6,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     permissions:
-      contents: read # Explicitly set to allow checkout
+      contents: write # Changed to write to allow auto-fixing and committing
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -19,8 +19,19 @@ jobs:
         continue-on-error: true
       - uses: oven-sh/setup-bun@v1
       - run: bun install --frozen-lockfile
+      - name: Fix formatting with Prettier
+        run: |
+          npm run lint -- --write
+      - name: Commit formatting fixes
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+          git add .
+          git commit -m "chore: auto-fix formatting with Prettier" || echo "No changes to commit"
+          git push
+        continue-on-error: true
       - run: npm run type
-      - run: npm run lint
+      - run: npm run lint # Re-run lint to ensure it passes after fixes
       - run: bun test
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
