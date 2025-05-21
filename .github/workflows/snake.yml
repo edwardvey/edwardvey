@@ -8,38 +8,35 @@ on:
 jobs:
   generate:
     permissions:
-      contents: write
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
-
       - name: Install dependencies
         run: npm install
-
       - name: Build action
         run: npm run build:action
-
       - name: Generate GitHub Contribution Snake
         uses: ./packages/action
         with:
           github_user_name: edwardvey
           outputs: |
             dist/github-contribution-grid-snake.svg?palette=github-light&dark_palette=github-dark
-
       - name: Debug - List directory contents
         run: |
           ls -R dist || echo "dist directory not found"
-
-      - name: Push to output branch
-        uses: crazy-max/ghaction-github-pages@v3.1.0
+      - uses: actions/upload-pages-artifact@v3
         with:
-          target_branch: output
-          build_dir: dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          path: dist
+      - uses: actions/deploy-pages@v4
+        id: deployment
