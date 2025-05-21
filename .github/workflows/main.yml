@@ -3,6 +3,39 @@ name: main
 on: [push]
 
 jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - run: npm install
+      - run: npm run build:action
+      - run: ./packages/action
+      - run: ls -R dist || echo "dist directory not found"
+      - name: Create index.html
+        run: |
+          cat <<EOT > dist/index.html
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+              <meta charset="UTF-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <title>Github README</title>
+          </head>
+          <body>
+              <h1>[ ]</h1>
+              <picture>
+                  <source media="(prefers-color-scheme: dark)" srcset="./github-contribution-grid-snake-dark.svg" />
+                  <source media="(prefers-color-scheme: light)" srcset="./github-contribution-grid-snake.svg" />
+                  <img alt="github contribution snake" src="./github-contribution-grid-snake.svg" />
+              </picture>
+          </body>
+          </html>
+          EOT
+      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/deploy-pages@v4
   test:
     runs-on: ubuntu-latest
     permissions:
