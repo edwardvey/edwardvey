@@ -34,13 +34,13 @@ export type DrawOptions = {
 
 const getCellsFromGrid = ({ width, height }: Grid) =>
   Array.from({ length: width }, (_, x) =>
-    Array.from({ length: height }, (_, y) => ({ x, y })),
+    Array.from({ length: height }, (_, y) => ({ x, y }))
   ).flat();
 
 const createLivingCells = (
   grid0: Grid,
   chain: Snake[],
-  cells: Point[] | null,
+  cells: Point[] | null
 ) => {
   const livingCells: (Point & {
     t: number | null;
@@ -73,7 +73,7 @@ export const createSvg = (
   cells: Point[] | null,
   chain: Snake[],
   drawOptions: DrawOptions,
-  animationOptions: Pick<AnimationOptions, "frameDuration">,
+  animationOptions: Pick<AnimationOptions, "frameDuration">
 ) => {
   const width = (grid.width + 2) * drawOptions.sizeCell;
   const height = (grid.height + 5) * drawOptions.sizeCell;
@@ -89,7 +89,7 @@ export const createSvg = (
       drawOptions,
       grid.width * drawOptions.sizeCell,
       (grid.height + 2) * drawOptions.sizeCell,
-      duration,
+      duration
     ),
     createSnake(chain, drawOptions, duration),
   ];
@@ -137,18 +137,18 @@ export const createSvg = (
     "Days Per Month:",
     daysPerMonth,
     "Current Month Index:",
-    currentMonthIndex,
+    currentMonthIndex
   );
 
   // Calculate offset for May 1, 2025 (approximate days from start to May 1)
   const startDate = new Date("2024-05-19"); // Approx grid start: Sunday, May 19, 2024
   const may1Date = new Date(currentDate.getFullYear(), 4, 1); // May 1, 2025
   const daysToMay1 = Math.floor(
-    (may1Date.valueOf() - startDate.valueOf()) / (1000 * 60 * 60 * 24),
+    (may1Date.valueOf() - startDate.valueOf()) / (1000 * 60 * 60 * 24)
   ); // Days from May 19, 2024, to May 1, 2025
   const columnOffset = Math.min(
     Math.max(0, Math.floor((totalDays - daysToMay1) / 7)),
-    grid.width - 1,
+    grid.width - 1
   ); // Convert to column (0-52)
   const baseX = (grid.width - columnOffset) * drawOptions.sizeCell; // Start May 1 at this x
   console.log(
@@ -157,7 +157,7 @@ export const createSvg = (
     "Column Offset:",
     columnOffset,
     "Base X:",
-    baseX,
+    baseX
   );
 
   // Space months evenly across the grid, starting June 2024 at left
@@ -167,7 +167,7 @@ export const createSvg = (
     const attrs = {
       x: x,
       y: -drawOptions.sizeCell * 0.5,
-      "font-size": "20",
+      "font-size": "40",
       "font-family": "Calibri",
       fill: "#333333",
       "text-anchor": "middle",
@@ -182,7 +182,7 @@ export const createSvg = (
       "X:",
       x,
       "Label:",
-      label,
+      label
     );
   }
 
@@ -195,7 +195,7 @@ export const createSvg = (
     const attrs = {
       x: -drawOptions.sizeCell * 0.5,
       y: y - drawOptions.sizeCell * 0.3,
-      "font-size": "20",
+      "font-size": "40",
       "font-family": "Calibri",
       fill: "#333333",
       "text-anchor": "end",
@@ -233,12 +233,12 @@ export const createSvg = (
   // Debug: Check SVG content before and after optimization
   console.log(
     "::debug::SVG Before Optimize Contains Text:",
-    svg.includes("<text"),
+    svg.includes("<text")
   );
   const optimizedSvg = optimizeSvg(svg);
   console.log(
     "::debug::SVG After Optimize Contains Text:",
-    optimizedSvg.includes("<text"),
+    optimizedSvg.includes("<text")
   );
   console.log("::debug::Month Labels Array:", monthLabels);
   console.log("::debug::Day Labels Array:", dayLabels);
