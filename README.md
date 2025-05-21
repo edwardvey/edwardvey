@@ -36,13 +36,8 @@
 ---
 
 ## 📈 GitHub Activity Overview
-
 <p align="left">
-  <img src="https://github-readme-stats.vercel.app/api?username=edwardvey&show_icons=true&theme=tokyonight&hide_border=true" alt="Ed's GitHub Stats" />
-</p>
-
-<p align="left">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=edwardvey&layout=compact&theme=tokyonight&hide_border=true" alt="Most Used Languages" />
+  <img src="https://your-vercel-app.vercel.app/api/top-langs/?username=edwardvey&count_private=true" alt="Most Used Languages" />
 </p>
 
 ---
