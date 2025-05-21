@@ -37,7 +37,7 @@
 
 
 ## 📈 GitHub Activity
-![Most Used Languages](https://github-readme-stats-jceg67dy8-edwardveys-projects.vercel.app/api/top-langs?username=edwardvey&count_private=true)
+![Most Used Languages](https://github-readme-stats.vercel.app/api/top-langs?username=edwardvey&count_private=true)
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/edwardvey/edwardvey/output/github-contribution-grid-snake-dark.svg" />
