@@ -12,6 +12,12 @@ jobs:
           node-version: "20"
       - run: npm install
       - run: npm run build:action
+      - run: |
+          echo "GH_TOKEN secret starts with: ${GH_TOKEN:0:5}"
+          echo "Environment variables:"
+          env
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
       - run: node packages/action/dist/index.js
         env:
           github_user_name: edwardvey
