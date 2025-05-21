@@ -37,9 +37,7 @@
 
 
 ## 📈 GitHub Activity Overview
-<p align="left">
-  <img src="https://github-readme-stats-jceg67dy8-edwardveys-projects.vercel.app/api/top-langs?username=edwardvey&count_private=true" alt="Most Used Languages" />
-</p>
+![Most Used Languages](https://github-readme-stats-jceg67dy8-edwardveys-projects.vercel.app/api/top-langs?username=edwardvey&count_private=true)
 
 ---
 
