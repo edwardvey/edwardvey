@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "dependencies": {
     "@actions/core": "1.11.1",
+    "@octokit/rest": "^21.1.1",
     "@snk/gif-creator": "1.0.0",
     "@snk/github-user-contribution": "1.0.0",
     "@snk/solver": "1.0.0",
