@@ -28,6 +28,7 @@
 </td>
 </tr>
 </table>
+
 <strong>🛠️ Design & Development Tools</strong><br><br>
 <p align="left">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" width="40" alt="Figma" title="Figma" />&nbsp;&nbsp;&nbsp;&nbsp;
@@ -60,6 +61,15 @@
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" width="40" alt="Kubernetes" title="Kubernetes" />
 </p>
 
+### 🧪 Testing Frameworks
+
+<p align="left">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" width="40" alt="Jest" title="Jest" />&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mocha/mocha-plain.svg" width="40" alt="Mocha" title="Mocha" />&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/chai/chai-plain.svg" width="40" alt="Chai" title="Chai" />&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cypress/cypress-original.svg" width="40" alt="Cypress" title="Cypress" />&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/testinglibrary/testinglibrary-icon.svg" width="40" alt="React Testing Library" title="React Testing Library" />
+</p>
 
 ## 📈 GitHub Activity
 <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=edwardvey&show_icons=true&locale=en&layout=compact&langs_count=10&card_width=445&hide_progress=false&hide_title=false&count_private=false&exclude_repo=&custom_title=Most%20Used%20Languages&hide=html&disable_animations=false&theme=default&hide_border=false&border_radius=6&precision=0" alt="Most Used Languages" style="max-width: 100%;">
