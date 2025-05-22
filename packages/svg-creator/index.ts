@@ -221,7 +221,8 @@ export const createSvg = (
     "Generated with https://github.com/Platane/snk",
     "</desc>",
     "<style>",
-    `text { fill: #333333 !important; font-family: Calibri; }`,
+    `text { fill: #333333 !important; font-family: Calibri; }
+    .axis-label { font-size: 38px !important; }`,
     optimizeCss(style),
     "</style>",
     ...elements.map((e) => e.svgElements).flat(),
