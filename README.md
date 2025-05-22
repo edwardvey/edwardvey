@@ -1,41 +1,53 @@
 ### 🌐 Web Development
 
-<div style="display: flex; max-width: 600px; margin: 0 auto;">
+<div style="display: flex; max-width: 100%; gap: 20px;">
 
-  <!-- Frontend -->
-  <div style="flex: 1; padding-right: 10px; display: flex; align-items: center; gap: 10px;">
-    <strong style="min-width: 80px;">🎨 Frontend</strong>
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="28" alt="HTML5" title="HTML5" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="28" alt="CSS3" title="CSS3" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="28" alt="JavaScript" title="JavaScript" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="28" alt="TypeScript" title="TypeScript" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="28" alt="React" title="React" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" width="28" alt="Vue.js" title="Vue.js" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" width="28" alt="Sass" title="Sass" />
-    <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" width="28" alt="Tailwind CSS" title="Tailwind CSS" />
+  <!-- Frontend Container -->
+  <div style="flex: 1; display: flex; flex-direction: column;">
+
+    <!-- Title -->
+    <div style="margin-bottom: 8px;">
+      <strong>🎨 Frontend</strong>
+    </div>
+
+    <!-- Icons row -->
+    <div style="display: flex; gap: 10px; align-items: center;">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="28" alt="HTML5" title="HTML5" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="28" alt="CSS3" title="CSS3" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="28" alt="JavaScript" title="JavaScript" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="28" alt="TypeScript" title="TypeScript" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="28" alt="React" title="React" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" width="28" alt="Vue.js" title="Vue.js" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" width="28" alt="Sass" title="Sass" />
+      <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" width="28" alt="Tailwind CSS" title="Tailwind CSS" />
+    </div>
+
   </div>
 
   <!-- Divider -->
-  <div style="width: 2px; border-left: 2px dotted #888; margin: 0 15px;"></div>
+  <div style="width: 2px; border-left: 2px dotted #888;"></div>
 
-  <!-- Backend -->
-  <div style="flex: 1; padding-left: 10px; display: flex; align-items: center; gap: 10px;">
-    <strong style="min-width: 80px;">⚙️ Backend</strong>
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="28" alt="Node.js" title="Node.js" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" width="28" alt="Express.js" title="Express.js" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="28" alt="Python" title="Python" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" width="28" alt="MySQL" title="MySQL" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mocha/mocha-plain.svg" width="28" alt="Mocha/Chai" title="Mocha/Chai" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" width="28" alt="Jest" title="Jest" />
+  <!-- Backend Container -->
+  <div style="flex: 1; display: flex; flex-direction: column;">
+
+    <!-- Title -->
+    <div style="margin-bottom: 8px;">
+      <strong>⚙️ Backend</strong>
+    </div>
+
+    <!-- Icons row -->
+    <div style="display: flex; gap: 10px; align-items: center;">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="28" alt="Node.js" title="Node.js" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" width="28" alt="Express.js" title="Express.js" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="28" alt="Python" title="Python" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" width="28" alt="MySQL" title="MySQL" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mocha/mocha-plain.svg" width="28" alt="Mocha/Chai" title="Mocha/Chai" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" width="28" alt="Jest" title="Jest" />
+    </div>
+
   </div>
 
 </div>
-
-
-
-
-
-
 <strong>🛠️ Design & Development Tools</strong><br><br>
 <p align="left">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" width="40" alt="Figma" title="Figma" />&nbsp;&nbsp;&nbsp;&nbsp;
