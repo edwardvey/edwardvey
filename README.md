@@ -30,6 +30,7 @@
 
 
 
+
 <strong>🛠️ Design & Development Tools</strong><br><br>
 <p align="left">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" width="40" alt="Figma" title="Figma" />&nbsp;&nbsp;&nbsp;&nbsp;
