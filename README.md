@@ -42,8 +42,8 @@
   <img src="./images/ethersjs.png" width="40" alt="Ethers.js" title="Ethers.js" />&nbsp;&nbsp;
   <img src="./images/foundry.png" width="40" alt="Foundry" title="Foundry" />&nbsp;&nbsp;
   <img src="./images/viem.png" width="40" alt="Viem" title="Viem" />&nbsp;&nbsp;
-  <img src="./images/slither.png" width="40" alt="Slither" title="Slither" />&nbsp;&nbsp;
-  <img src="./images/solhint.png" width="40" alt="Solhint" title="Solhint" />&nbsp;&nbsp;
+  <img src="./images/slither.png" width="100" alt="Slither" title="Slither" />&nbsp;&nbsp;
+  <img src="./images/solhint.png" width="100" alt="Solhint" title="Solhint" />&nbsp;&nbsp;
 </p>
 
 <strong>🚀 Deployment & DevOps</strong>
@@ -54,8 +54,8 @@
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-original.svg" width="40" alt="Heroku" title="Heroku" />&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/netlify/netlify-original.svg" width="40" alt="Netlify" title="Netlify" />&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="./images/jira.jpg" width="40" alt="Jira" />&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" width="100" alt="Docker" title="Docker" />&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" width="100" alt="Kubernetes" title="Kubernetes" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" width="40" alt="Docker" title="Docker" />&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" width="40" alt="Kubernetes" title="Kubernetes" />
 </p>
 
 
