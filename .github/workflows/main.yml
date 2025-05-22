@@ -19,6 +19,7 @@ jobs:
         uses: ./packages/action
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_user_name: edwardvey
       - name: Move and commit SVG
         run: |
           mkdir -p output
