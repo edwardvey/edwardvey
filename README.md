@@ -3,7 +3,7 @@
 <table>
 <tr>
 <td width="50%" valign="top">
-<strong>🎨 Frontend</strong>
+<strong>🎨 Frontend</strong><br><br>
 <p align="left">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="40" alt="HTML5" title="HTML5" />&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="40" alt="CSS3" title="CSS3" />&nbsp;&nbsp;&nbsp;&nbsp;
@@ -16,7 +16,7 @@
 </p>
 </td>
 <td width="50%" valign="top">
-<strong>⚙️ Backend</strong>
+<strong>⚙️ Backend</strong><br><br>
 <p align="left">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="40" alt="Node.js" title="Node.js" />&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" width="40" alt="Express.js" title="Express.js" />&nbsp;&nbsp;&nbsp;&nbsp;
@@ -28,7 +28,7 @@
 </td>
 </tr>
 </table>
-<strong>🛠️ Design & Development Tools</strong>
+<strong>🛠️ Design & Development Tools</strong><br><br>
 <p align="left">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" width="40" alt="Figma" title="Figma" />&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" width="40" alt="Postman" title="Postman" />
