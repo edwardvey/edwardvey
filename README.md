@@ -49,8 +49,8 @@
   <img src="./images/Hardhat.svg" width="40" alt="Hardhat" title="Hardhat" />&nbsp;&nbsp;
   <img src="./images/foundry.png" width="40" alt="Foundry" title="Foundry" />&nbsp;&nbsp;
   <img src="./images/viem.png" width="40" alt="Viem" title="Viem" />&nbsp;&nbsp;
-  <img src="./images/slither.png" width="70" alt="Slither" title="Slither" />&nbsp;&nbsp;
-  <img src="./images/solhint.png" width="70" alt="Solhint" title="Solhint" />&nbsp;&nbsp;
+  <img src="./images/slither.png" width="75" alt="Slither" title="Slither" />&nbsp;&nbsp;
+  <img src="./images/solhint.png" width="80" alt="Solhint" title="Solhint" />&nbsp;&nbsp;
 </p>
 
 <strong>🚀 Deployment & DevOps</strong>
