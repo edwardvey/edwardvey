@@ -42,8 +42,8 @@
   <img src="./images/ethersjs.png" width="40" alt="Ethers.js" title="Ethers.js" />&nbsp;&nbsp;
   <img src="./images/foundry.png" width="40" alt="Foundry" title="Foundry" />&nbsp;&nbsp;
   <img src="./images/viem.png" width="40" alt="Viem" title="Viem" />&nbsp;&nbsp;
-  <img src="./images/slither.png" width="100" alt="Slither" title="Slither" />&nbsp;&nbsp;
-  <img src="./images/solhint.png" width="100" alt="Solhint" title="Solhint" />&nbsp;&nbsp;
+  <img src="./images/slither.png" width="70" alt="Slither" title="Slither" />&nbsp;&nbsp;
+  <img src="./images/solhint.png" width="70" alt="Solhint" title="Solhint" />&nbsp;&nbsp;
 </p>
 
 <strong>🚀 Deployment & DevOps</strong>
