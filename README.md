@@ -36,7 +36,7 @@
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" width="40" alt="Postman" title="Postman" />
 </p>
 
-### 🔗 Web3 & Blockchain
+<strong>🔗 Web3 & Blockchain</strong><br><br>
 
 <p align="left">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/solidity/solidity-original.svg" width="40" alt="Solidity" title="Solidity" />&nbsp;&nbsp;&nbsp;&nbsp;
@@ -49,7 +49,7 @@
   <img src="https://img.shields.io/badge/WalletConnect-3C3C3C?style=for-the-badge" alt="WalletConnect" title="WalletConnect" />
 </p>
 
-### 🚀 Deployment & DevOps
+<strong>🚀 Deployment & DevOps</strong><br><br>
 
 <p align="left">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="40" alt="GitHub" title="GitHub" />&nbsp;&nbsp;&nbsp;&nbsp;
@@ -63,7 +63,7 @@
 </p>
 
 
-## 📈 GitHub Activity
+### 📈 GitHub Activity
 ---
 <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=edwardvey&show_icons=true&locale=en&layout=compact&langs_count=10&card_width=445&hide_progress=false&hide_title=false&count_private=false&exclude_repo=&custom_title=Most%20Used%20Languages&hide=html&disable_animations=false&theme=default&hide_border=false&border_radius=6&precision=0" alt="Most Used Languages" style="max-width: 100%;">
 
@@ -74,5 +74,5 @@
 </picture>
 
 
-## 🗂️ Projects
+### 🗂️ Projects
 ---
