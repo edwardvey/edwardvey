@@ -3,7 +3,7 @@
 
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
   <tr>
-    <td width="50%" valign="top" style="padding-right: 20px;">
+    <td width="50%" valign="top" style="padding-right: 2px;">
       <strong>🎨 Frontend</strong><br><br>
       <p align="left" style="margin:0; padding:0;">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="40" alt="HTML5" title="HTML5" />&nbsp;&nbsp;&nbsp;&nbsp;
@@ -16,7 +16,7 @@
         <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" width="40" alt="Tailwind CSS" title="Tailwind CSS" />
       </p>
     </td>
-    <td width="50%" valign="top" style="padding-left: 20px;">
+    <td width="50%" valign="top" style="padding-left: 2px;">
       <strong>⚙️ Backend</strong><br><br>
       <p align="left" style="margin:0; padding:0;">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="40" alt="Node.js" title="Node.js" />&nbsp;&nbsp;&nbsp;&nbsp;
