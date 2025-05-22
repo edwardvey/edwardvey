@@ -33,14 +33,20 @@
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" width="40" alt="Figma" title="Figma" />&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" width="40" alt="Postman" title="Postman" />&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mocha/mocha-plain.svg" width="40" alt="Mocha" title="Mocha" />&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/chai/chai-original.svg" width="40" alt="Chai" title="Chai" />&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="./images/chai.png" width="40" alt="Chai" title="Chai" />&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" width="40" alt="Jest" title="Jest" />
 </p>
 
 <strong>🔗 Web3 & Blockchain</strong>
 
 <p align="left">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/solidity/solidity-original.svg" width="40" alt="Solidity" title="Solidity" />&nbsp;&nbsp;
+  <img src="https://cdn.simpleicons.org/ethereum" width="40" alt="EVM (Ethereum)" title="EVM" />&nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/web3js/web3js-original.svg" width="40" alt="Web3.js" title="Web3.js" />&nbsp;&nbsp;
   <img src="./images/ethersjs.png" width="40" alt="Ethers.js" title="Ethers.js" />&nbsp;&nbsp;
+  <img src="https://cdn.simpleicons.org/openzeppelin" width="40" alt="OpenZeppelin" title="OpenZeppelin" />&nbsp;&nbsp;
+  <img src="https://cdn.simpleicons.org/walletconnect" width="40" alt="WalletConnect" title="WalletConnect" />
+  <img src="https://cdn.simpleicons.org/hardhat" width="40" alt="Hardhat" title="Hardhat" />&nbsp;&nbsp;
   <img src="./images/foundry.png" width="40" alt="Foundry" title="Foundry" />&nbsp;&nbsp;
   <img src="./images/viem.png" width="40" alt="Viem" title="Viem" />&nbsp;&nbsp;
   <img src="./images/slither.png" width="70" alt="Slither" title="Slither" />&nbsp;&nbsp;
