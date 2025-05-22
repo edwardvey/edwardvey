@@ -30,13 +30,13 @@
   </tr>
 </table>
 
-<strong>🛠️ Design & Development Tools</strong><br><br>
+<strong>🛠️ Design & Development Tools</strong>
 <p align="left">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" width="40" alt="Figma" title="Figma" />&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" width="40" alt="Postman" title="Postman" />
 </p>
 
-<strong>🔗 Web3 & Blockchain</strong><br><br>
+<strong>🔗 Web3 & Blockchain</strong>
 
 <p align="left">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/solidity/solidity-original.svg" width="40" alt="Solidity" title="Solidity" />&nbsp;&nbsp;&nbsp;&nbsp;
@@ -49,7 +49,7 @@
   <img src="https://img.shields.io/badge/WalletConnect-3C3C3C?style=for-the-badge" alt="WalletConnect" title="WalletConnect" />
 </p>
 
-<strong>🚀 Deployment & DevOps</strong><br><br>
+<strong>🚀 Deployment & DevOps</strong>
 
 <p align="left">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="40" alt="GitHub" title="GitHub" />&nbsp;&nbsp;&nbsp;&nbsp;
