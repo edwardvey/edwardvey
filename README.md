@@ -1,20 +1,8 @@
 ### 🌐 Web Development
-<style>
-  table {
-    border-collapse: collapse;
-    border: none;
-  }
-  table, td, th {
-    border: none !important;
-  }
-  td {
-    padding: 0 20px 0 0;
-    vertical-align: top;
-  }
-</style>
-<table>
+
+<table style="border-collapse: collapse; border: none; width: 100%;">
 <tr>
-<td width="50%" valign="top">
+<td width="50%" valign="top" style="border: none; padding-right: 20px;">
 <strong>🎨 Frontend</strong><br><br>
 <p align="left">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="40" alt="HTML5" title="HTML5" />&nbsp;&nbsp;&nbsp;&nbsp;
