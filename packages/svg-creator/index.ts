@@ -171,6 +171,7 @@ export const createSvg = (
       "font-family": "Calibri",
       fill: "#333333",
       "text-anchor": "middle",
+      class: "axis-label",
     };
     const label = `<text ${toAttribute(attrs)}>${months[monthIndex]}</text>`;
     monthLabels.push(label);
@@ -199,6 +200,7 @@ export const createSvg = (
       "font-family": "Calibri",
       fill: "#333333",
       "text-anchor": "end",
+      class: "axis-label",
     };
     const label = `<text ${toAttribute(attrs)}>${days[day]}</text>`;
     dayLabels.push(label);
