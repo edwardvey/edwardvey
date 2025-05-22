@@ -222,7 +222,7 @@ export const createSvg = (
     "</desc>",
     "<style>",
     `text { fill: #333333 !important; font-family: Calibri; }
-    .axis-label { font-size: 38px !important; }`,
+    .axis-label { font-size: 40px !important; }`,
     optimizeCss(style),
     "</style>",
     ...elements.map((e) => e.svgElements).flat(),
