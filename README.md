@@ -3,7 +3,7 @@
 <table>
 <tr>
 <td width="50%" valign="top">
-#### 🎨 Frontend
+** 🎨 Frontend**
 <p align="left">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="40" alt="HTML5" title="HTML5" />&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="40" alt="CSS3" title="CSS3" />&nbsp;&nbsp;&nbsp;&nbsp;
