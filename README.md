@@ -1,5 +1,17 @@
 ### 🌐 Web Development
-
+<style>
+  table {
+    border-collapse: collapse;
+    border: none;
+  }
+  table, td, th {
+    border: none !important;
+  }
+  td {
+    padding: 0 20px 0 0;
+    vertical-align: top;
+  }
+</style>
 <table>
 <tr>
 <td width="50%" valign="top">
