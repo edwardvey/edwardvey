@@ -15,7 +15,7 @@
   <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" width="40" alt="Tailwind CSS" title="Tailwind CSS" />&nbsp;&nbsp;&nbsp;&nbsp;
 </p>
 </td>
-<td width="50%" valign="top">
+<td width="50%" valign="top" style="border: none; padding-right: 20px;">
 <strong>⚙️ Backend</strong><br><br>
 <p align="left">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="40" alt="Node.js" title="Node.js" />&nbsp;&nbsp;&nbsp;&nbsp;
