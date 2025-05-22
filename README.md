@@ -4,9 +4,9 @@
 <div style="display: flex; justify-content: space-between; flex-wrap: wrap; margin-bottom: 16px;">
 
   <!-- Frontend Column -->
-  <div style="flex: 1; min-width: 250px; padding-right: 16px;">
-    **🎨 Frontend**  
-    <p style="margin: 8px 0 0;">
+  <div style="flex: 1; min-width: 250px; padding-right: 6px;">
+    <strong>🎨 Frontend</strong>
+    <p style="margin-top: 8px;">
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="40" alt="HTML5" />&nbsp;&nbsp;
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="40" alt="CSS3" />&nbsp;&nbsp;
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="40" alt="JavaScript" />&nbsp;&nbsp;
@@ -19,9 +19,9 @@
   </div>
 
   <!-- Backend Column -->
-  <div style="flex: 1; min-width: 250px; padding-left: 16px;">
-    **⚙️ Backend**  
-    <p style="margin: 8px 0 0;">
+  <div style="flex: 1; min-width: 250px; padding-left: 6px;">
+    <strong>⚙️ Backend</strong>
+    <p style="margin-top: 8px;">
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="40" alt="Node.js" />&nbsp;&nbsp;
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" width="40" alt="Express.js" />&nbsp;&nbsp;
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="40" alt="Python" />&nbsp;&nbsp;
