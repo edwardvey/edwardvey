@@ -24,6 +24,8 @@ export type DrawOptions = {
   sizeCell: number;
   sizeDot: number;
   sizeDotBorderRadius: number;
+  fontSizeAxis?: number; // Added
+  fontFamilyAxis?: string; // Added
   dark?: {
     colorDots: Record<Color, string>;
     colorEmpty: string;
@@ -167,8 +169,8 @@ export const createSvg = (
     const attrs = {
       x: x,
       y: -drawOptions.sizeCell * 0.5,
-      "font-size": "38",
-      "font-family": "Calibri",
+      "font-size": drawOptions.fontSizeAxis || "40",
+      "font-family": drawOptions.fontFamilyAxis || "Verdana, Arial, sans-serif",
       fill: "#333333",
       "text-anchor": "middle",
       class: "axis-label",
@@ -196,8 +198,8 @@ export const createSvg = (
     const attrs = {
       x: -drawOptions.sizeCell * 0.5,
       y: y - drawOptions.sizeCell * 0.3,
-      "font-size": "38",
-      "font-family": "Calibri",
+      "font-size": drawOptions.fontSizeAxis || "40",
+      "font-family": drawOptions.fontFamilyAxis || "Verdana, Arial, sans-serif",
       fill: "#333333",
       "text-anchor": "end",
       class: "axis-label",
@@ -223,8 +225,8 @@ export const createSvg = (
     "Generated with https://github.com/Platane/snk",
     "</desc>",
     "<style>",
-    `text { fill: #333333 !important; font-family: Calibri; }
-    .axis-label { font-size: 40px !important; }`,
+    `text { fill: #333333 !important; font-family: ${drawOptions.fontFamilyAxis || "Verdana, Arial, sans-serif"}; }
+   .axis-label { font-size: ${drawOptions.fontSizeAxis || 40}px !important; font-weight: bold !important; }`,
     optimizeCss(style),
     "</style>",
     ...elements.map((e) => e.svgElements).flat(),

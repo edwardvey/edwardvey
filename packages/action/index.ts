@@ -2,8 +2,9 @@ import * as fs from "fs";
 import * as path from "path";
 import * as core from "@actions/core";
 import { parseOutputsOptions } from "./outputsOptions";
+import { generateContributionSnake } from "./generateContributionSnake"; // Switch to static import for consistency
 
-(async () => {
+const main = async () => {
   try {
     const userName =
       process.env.github_user_name || core.getInput("github_user_name");
@@ -35,10 +36,31 @@ import { parseOutputsOptions } from "./outputsOptions";
     );
     console.log("Parsed outputs:", outputs);
 
-    const { generateContributionSnake } = await import(
-      "./generateContributionSnake"
-    );
-    const results = await generateContributionSnake(userName, outputs, {
+    const customDrawOptions = {
+      fontSizeAxis: 40,
+      fontFamilyAxis: "Verdana, Arial, sans-serif",
+    };
+
+    const validOutputs = outputs
+      .map((out) => {
+        if (!out || !out.format) return null; // Skip if out is null or format is missing
+        return {
+          ...out,
+          drawOptions: { ...out.drawOptions, ...customDrawOptions },
+        };
+      })
+      .filter(
+        (
+          out
+        ): out is {
+          filename: string; // Add filename to the type predicate
+          format: "svg" | "gif";
+          drawOptions: any;
+          animationOptions: any;
+        } => out !== null
+      );
+
+    const results = await generateContributionSnake(userName, validOutputs, {
       githubToken,
     });
 
@@ -64,4 +86,6 @@ import { parseOutputsOptions } from "./outputsOptions";
     core.setFailed(`Action failed with "${e.message}"`);
     console.error("Error details:", e);
   }
-})();
+};
+
+main();

@@ -32,7 +32,7 @@ export const generateContributionSnake = async (
       switch (format) {
         case "svg": {
           console.log(`🖌 creating svg (outputs[${i}])`);
-          const { createSvg } = await import("@snk/svg-creator");
+          const { createSvg } = await import("../svg-creator");
           return createSvg(grid, cells, chain, drawOptions, animationOptions);
         }
         case "gif": {
