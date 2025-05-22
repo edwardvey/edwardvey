@@ -64,6 +64,7 @@
 
 
 ## 📈 GitHub Activity
+---
 <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=edwardvey&show_icons=true&locale=en&layout=compact&langs_count=10&card_width=445&hide_progress=false&hide_title=false&count_private=false&exclude_repo=&custom_title=Most%20Used%20Languages&hide=html&disable_animations=false&theme=default&hide_border=false&border_radius=6&precision=0" alt="Most Used Languages" style="max-width: 100%;">
 
 <picture>
@@ -71,9 +72,7 @@
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/edwardvey/edwardvey/output/github-contribution-grid-snake.svg" />
   <img alt="github contribution snake" src="https://raw.githubusercontent.com/edwardvey/edwardvey/output/github-contribution-grid-snake.svg" />
 </picture>
----
+
 
 ## 🗂️ Projects
-
-
 ---
