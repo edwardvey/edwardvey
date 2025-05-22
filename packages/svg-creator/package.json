@@ -1,6 +1,7 @@
 {
   "name": "@snk/svg-creator",
   "version": "1.0.0",
+  "main": "index.ts",
   "dependencies": {
     "@snk/solver": "1.0.0"
   }

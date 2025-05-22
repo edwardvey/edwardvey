@@ -7,7 +7,7 @@
     "@snk/gif-creator": "1.0.0",
     "@snk/github-user-contribution": "1.0.0",
     "@snk/solver": "1.0.0",
-    "@snk/svg-creator": "1.0.0",
+    "@snk/svg-creator": "file:../svg-creator",
     "@snk/types": "1.0.0"
   },
   "devDependencies": {
