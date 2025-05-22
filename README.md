@@ -1,6 +1,5 @@
 ### 📝 Languages & Tools
 ---
-
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
   <tr>
     <td width="50%" valign="top" style="padding-right: 20px;">
@@ -28,17 +27,7 @@
   </tr>
 </table>
 
-<strong>🛠️ Design & Development Tools</strong>
-<p align="left">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" width="40" alt="Figma" title="Figma" />&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" width="40" alt="Postman" title="Postman" />&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mocha/mocha-plain.svg" width="40" alt="Mocha" title="Mocha" />&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="./images/chai.png" width="40" alt="Chai" title="Chai" />&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" width="40" alt="Jest" title="Jest" />
-</p>
-
 <strong>🔗 Web3 & Blockchain</strong>
-
 <p align="left">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/solidity/solidity-original.svg" width="40" alt="Solidity" title="Solidity" />&nbsp;&nbsp;
   <img src="https://cdn.simpleicons.org/ethereum" width="40" alt="EVM (Ethereum)" title="EVM" />&nbsp;&nbsp;
@@ -53,8 +42,16 @@
   <img src="./images/solhint.png" width="80" alt="Solhint" title="Solhint" />&nbsp;&nbsp;
 </p>
 
-<strong>🚀 Deployment & DevOps</strong>
+<strong>🛠️ Design & Development Tools</strong>
+<p align="left">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" width="40" alt="Figma" title="Figma" />&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" width="40" alt="Postman" title="Postman" />&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mocha/mocha-plain.svg" width="40" alt="Mocha" title="Mocha" />&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="./images/chai.png" width="40" alt="Chai" title="Chai" />&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" width="40" alt="Jest" title="Jest" />
+</p>
 
+<strong>🚀 Deployment & DevOps</strong>
 <p align="left">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="40" alt="GitHub" title="GitHub" />&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="40" alt="Git" title="Git" />&nbsp;&nbsp;&nbsp;&nbsp;
