@@ -40,21 +40,13 @@
 
 <p align="left">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/solidity/solidity-original.svg" width="40" alt="Solidity" title="Solidity" />&nbsp;&nbsp;&nbsp;&nbsp;
-  <img
-  src="https://img.shields.io/badge/Ethers.js-3C3C3C?style=for-the-badge&logo=ethersdotjs&logoColor=white"
-  width="80"
-  alt="Ethers.js"
-  title="Ethers.js" />&nbsp;&nbsp;&nbsp;&nbsp;
-  <img
-  src="https://img.shields.io/badge/Foundry-000000?style=for-the-badge&logo=foundry&logoColor=white"
-  width="80"
-  alt="Foundry"
-  title="Foundry" />&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="https://img.shields.io/badge/Viem-3C3C3C?style=for-the-badge&logoColor=white" alt="Viem" title="Viem" />&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="https://img.shields.io/badge/Slither-3C3C3C?style=for-the-badge" alt="Slither" title="Slither" />&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="https://img.shields.io/badge/Solhint-3C3C3C?style=for-the-badge" alt="Solhint" title="Solhint" />&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="https://img.shields.io/badge/OpenZeppelin-3C3C3C?style=for-the-badge&logo=OpenZeppelin" alt="OpenZeppelin" title="OpenZeppelin" />&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="https://img.shields.io/badge/WalletConnect-3C3C3C?style=for-the-badge" alt="WalletConnect" title="WalletConnect" />
+  <img src="https://cdn.simpleicons.org/ethers.js" width="40" alt="Ethers.js" title="Ethers.js" />&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://cdn.simpleicons.org/foundry" width="40" alt="Foundry" title="Foundry" />&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://cdn.simpleicons.org/viem" width="40" alt="Viem" title="Viem" />&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://cdn.simpleicons.org/slither" width="40" alt="Slither" title="Slither" />&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://cdn.simpleicons.org/solhint" width="40" alt="Solhint" title="Solhint" />&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://cdn.simpleicons.org/openzeppelin" width="40" alt="OpenZeppelin" title="OpenZeppelin" />&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://cdn.simpleicons.org/walletconnect" width="40" alt="WalletConnect" title="WalletConnect" />
 </p>
 
 <strong>🚀 Deployment & DevOps</strong>
