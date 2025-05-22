@@ -33,7 +33,7 @@
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" width="40" alt="Figma" title="Figma" />&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" width="40" alt="Postman" title="Postman" />&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mocha/mocha-plain.svg" width="40" alt="Mocha" title="Mocha" />&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="./images/chai.svg" width="40" alt="Chai" title="Chai" />&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="./images/chai.png" width="40" alt="Chai" title="Chai" />&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" width="40" alt="Jest" title="Jest" />
 </p>
 
