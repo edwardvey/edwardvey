@@ -14,7 +14,6 @@
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="40" alt="React" />&nbsp;&nbsp;
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" width="40" alt="Vue.js" />&nbsp;&nbsp;
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" width="40" alt="Sass" />&nbsp;&nbsp;
-      <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" width="40" alt="Tailwind CSS" />
     </p>
   </div>
 
