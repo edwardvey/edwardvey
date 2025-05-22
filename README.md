@@ -39,61 +39,11 @@
 <strong>🔗 Web3 & Blockchain</strong>
 
 <p align="left">
-  <!-- Solidity (Devicon) -->
-  <img
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/solidity/solidity-original.svg"
-    width="40"
-    alt="Solidity"
-    title="Solidity" />&nbsp;&nbsp;&nbsp;&nbsp;
-
-  <!-- Ethers.js (official PNG) -->
-  <img
-    src="https://raw.githubusercontent.com/ethers-io/ethers.js/main/docs/ethers-logo.png"
-    width="40"
-    alt="Ethers.js"
-    title="Ethers.js" />&nbsp;&nbsp;&nbsp;&nbsp;
-
-  <!-- Foundry (official SVG) -->
-  <img
-    src="https://raw.githubusercontent.com/foundry-rs/foundry/main/logo.svg"
-    width="40"
-    alt="Foundry"
-    title="Foundry" />&nbsp;&nbsp;&nbsp;&nbsp;
-
-  <!-- Viem (unofficial—use package’s GitHub logo) -->
-  <img
-    src="https://raw.githubusercontent.com/viem/viem/main/assets/viem-logo.svg"
-    width="40"
-    alt="Viem"
-    title="Viem" />&nbsp;&nbsp;&nbsp;&nbsp;
-
-  <!-- Slither (fallback to shields flat-square) -->
-  <img
-    src="https://img.shields.io/badge/Slither-3C3C3C?style=flat-square&logo=ghost"
-    width="80"
-    alt="Slither"
-    title="Slither" />&nbsp;&nbsp;&nbsp;&nbsp;
-
-  <!-- Solhint (fallback to shields flat-square) -->
-  <img
-    src="https://img.shields.io/badge/Solhint-3C3C3C?style=flat-square&logo=solhint"
-    width="80"
-    alt="Solhint"
-    title="Solhint" />&nbsp;&nbsp;&nbsp;&nbsp;
-
-  <!-- OpenZeppelin (Simple Icons) -->
-  <img
-    src="https://cdn.simpleicons.org/openzeppelin"
-    width="40"
-    alt="OpenZeppelin"
-    title="OpenZeppelin" />&nbsp;&nbsp;&nbsp;&nbsp;
-
-  <!-- WalletConnect (Simple Icons) -->
-  <img
-    src="https://cdn.simpleicons.org/walletconnect"
-    width="40"
-    alt="WalletConnect"
-    title="WalletConnect" />
+  <img src="./images/ethersjs.png" width="40" alt="Ethers.js" title="Ethers.js" />&nbsp;&nbsp;
+  <img src="./images/foundry.png" width="40" alt="Foundry" title="Foundry" />&nbsp;&nbsp;
+  <img src="./images/viem.png" width="40" alt="Viem" title="Viem" />&nbsp;&nbsp;
+  <img src="./images/slither.png" width="70" alt="Slither" title="Slither" />&nbsp;&nbsp;
+  <img src="./images/solhint.png" width="70" alt="Solhint" title="Solhint" />&nbsp;&nbsp;
 </p>
 
 <strong>🚀 Deployment & DevOps</strong>
@@ -101,10 +51,9 @@
 <p align="left">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="40" alt="GitHub" title="GitHub" />&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="40" alt="Git" title="Git" />&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="https://img.shields.io/badge/GitFlow-3C3C3C?style=for-the-badge" alt="GitFlow" title="GitFlow" />&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-original.svg" width="40" alt="Heroku" title="Heroku" />&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/netlify/netlify-original.svg" width="40" alt="Netlify" title="Netlify" />&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="https://img.shields.io/badge/Jira-0052CC?style=for-the-badge&logo=jira&logoColor=white" alt="Jira" title="Jira" />&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="./images/jira.jpg" width="70" alt="Jira" />&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" width="40" alt="Docker" title="Docker" />&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" width="40" alt="Kubernetes" title="Kubernetes" />
 </p>
