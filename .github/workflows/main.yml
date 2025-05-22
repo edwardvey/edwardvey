@@ -1,0 +1,36 @@
+name: Generate Snake Animation
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "0 0 * * *" # Daily at midnight
+  workflow_dispatch: # Enable manual triggering
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "Running workflow from main.yml"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - run: npm install
+      - run: npm run build:action
+      - run: |
+          echo "GH_TOKEN secret starts with: ${GH_TOKEN:0:5}"
+          echo "Environment variables:"
+          env
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      - run: node packages/action/dist/index.js
+        env:
+          github_user_name: edwardvey
+          outputs: output/github-contribution-grid-snake.svg
+            output/github-contribution-grid-snake-dark.svg?palette=github-dark
+          github_token: ${{ secrets.GH_TOKEN }}
+      - run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+          git add output/
+          git commit -m "chore: update snake animation" || echo "No changes to commit"
+          git push

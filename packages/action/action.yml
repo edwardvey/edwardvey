@@ -1,0 +1,19 @@
+name: "Generate Contribution Snake with Labels"
+description: "Generate a contribution snake SVG with month and day labels for a GitHub user"
+author: "edwardvey"
+
+inputs:
+  github_user_name:
+    description: "GitHub username to fetch contributions for"
+    required: true
+  outputs:
+    description: "Output file paths and options (e.g., dist/snake.svg?palette=...&dark_palette=...)"
+    required: true
+  github_token:
+    description: "GitHub token used to fetch the contribution calendar. Defaults to the action token."
+    required: false
+    default: ${{ github.token }}
+
+runs:
+  using: "node20"
+  main: "dist/index.js"
