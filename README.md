@@ -44,7 +44,6 @@
   <img src="./images/viem.png" width="40" alt="Viem" title="Viem" />&nbsp;&nbsp;
   <img src="./images/slither.png" width="40" alt="Slither" title="Slither" />&nbsp;&nbsp;
   <img src="./images/solhint.png" width="40" alt="Solhint" title="Solhint" />&nbsp;&nbsp;
-  <img src="./images/jira.jpg" width="40" alt="Jira" title="Jira" />
 </p>
 
 <strong>🚀 Deployment & DevOps</strong>
@@ -52,10 +51,9 @@
 <p align="left">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="40" alt="GitHub" title="GitHub" />&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="40" alt="Git" title="Git" />&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="https://img.shields.io/badge/GitFlow-3C3C3C?style=for-the-badge" alt="GitFlow" title="GitFlow" />&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-original.svg" width="40" alt="Heroku" title="Heroku" />&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/netlify/netlify-original.svg" width="40" alt="Netlify" title="Netlify" />&nbsp;&nbsp;&nbsp;&nbsp;
-      <img src="./images/jira.jpg" width="40" alt="Jira" />
+  <img src="./images/jira.jpg" width="40" alt="Jira" />&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" width="40" alt="Docker" title="Docker" />&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" width="40" alt="Kubernetes" title="Kubernetes" />
 </p>
