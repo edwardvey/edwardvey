@@ -1,32 +1,31 @@
 ### 🌐 Web Development
 
-<div style="display: flex; align-items: center; max-width: 600px;">
-
-  <div style="flex: 1; padding-right: 20px;">
+<div style="display: flex; align-items: center; width: 100%; max-width: 800px; margin: auto;">
+  <div style="width: 48%; padding-right: 1%; box-sizing: border-box;">
     <strong>🎨 Frontend</strong><br><br>
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="28" alt="HTML5" title="HTML5" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="28" alt="CSS3" title="CSS3" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="28" alt="JavaScript" title="JavaScript" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="28" alt="TypeScript" title="TypeScript" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="28" alt="React" title="React" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" width="28" alt="Vue.js" title="Vue.js" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" width="28" alt="Sass" title="Sass" />
-    <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" width="28" alt="Tailwind CSS" title="Tailwind CSS" />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" title="HTML5" style="width: 1.75em; vertical-align: middle; margin-right: 0.5em;" />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" title="CSS3" style="width: 1.75em; vertical-align: middle; margin-right: 0.5em;" />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" title="JavaScript" style="width: 1.75em; vertical-align: middle; margin-right: 0.5em;" />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" title="TypeScript" style="width: 1.75em; vertical-align: middle; margin-right: 0.5em;" />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" title="React" style="width: 1.75em; vertical-align: middle; margin-right: 0.5em;" />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue.js" title="Vue.js" style="width: 1.75em; vertical-align: middle; margin-right: 0.5em;" />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" alt="Sass" title="Sass" style="width: 1.75em; vertical-align: middle; margin-right: 0.5em;" />
+    <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="Tailwind CSS" title="Tailwind CSS" style="width: 1.75em; vertical-align: middle;" />
   </div>
 
-  <div style="border-left: 2px dotted #888; height: 80px; margin: 0 20px;"></div>
+  <div style="width: 2%; border-left: 2px dotted #888; height: 100%;"></div>
 
-  <div style="flex: 1; padding-left: 20px;">
+  <div style="width: 48%; padding-left: 1%; box-sizing: border-box;">
     <strong>⚙️ Backend</strong><br><br>
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="28" alt="Node.js" title="Node.js" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" width="28" alt="Express.js" title="Express.js" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="28" alt="Python" title="Python" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" width="28" alt="MySQL" title="MySQL" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mocha/mocha-plain.svg" width="28" alt="Mocha/Chai" title="Mocha/Chai" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" width="28" alt="Jest" title="Jest" />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" title="Node.js" style="width: 1.75em; vertical-align: middle; margin-right: 0.5em;" />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express.js" title="Express.js" style="width: 1.75em; vertical-align: middle; margin-right: 0.5em;" />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" title="Python" style="width: 1.75em; vertical-align: middle; margin-right: 0.5em;" />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" title="MySQL" style="width: 1.75em; vertical-align: middle; margin-right: 0.5em;" />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mocha/mocha-plain.svg" alt="Mocha/Chai" title="Mocha/Chai" style="width: 1.75em; vertical-align: middle; margin-right: 0.5em;" />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" alt="Jest" title="Jest" style="width: 1.75em; vertical-align: middle;" />
   </div>
-
 </div>
+
 
 
 
