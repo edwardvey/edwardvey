@@ -44,7 +44,7 @@
   <img src="https://cdn.simpleicons.org/ethereum" width="40" alt="EVM (Ethereum)" title="EVM" />&nbsp;&nbsp;
   <img src="./images/web3js.png" width="40" alt="Web3.js" title="Web3.js" />&nbsp;&nbsp;
   <img src="./images/ethersjs.png" width="40" alt="Ethers.js" title="Ethers.js" />&nbsp;&nbsp;
-  <img src="./images/OpenZeppelin.png" width="60" alt="OpenZeppelin" title="OpenZeppelin" />&nbsp;&nbsp;
+  <img src="./images/OpenZeppelin.png" width="50" alt="OpenZeppelin" title="OpenZeppelin" />&nbsp;&nbsp;
   <img src="https://cdn.simpleicons.org/walletconnect" width="40" alt="WalletConnect" title="WalletConnect" />&nbsp;&nbsp;
   <img src="./images/Hardhat.svg" width="40" alt="Hardhat" title="Hardhat" />&nbsp;&nbsp;
   <img src="./images/foundry.png" width="40" alt="Foundry" title="Foundry" />&nbsp;&nbsp;
