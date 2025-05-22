@@ -1,6 +1,5 @@
 ### 🌐 Web Development
-<!-- Wrap the table in a white-border “overlay” div -->
-<div style="display: inline-block; border: 4px solid #fff; margin: -4px;">
+
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
   <tr>
     <td width="50%" valign="top" style="padding-right: 20px;">
@@ -29,7 +28,7 @@
     </td>
   </tr>
 </table>
-  </div>
+
 <strong>🛠️ Design & Development Tools</strong><br><br>
 <p align="left">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" width="40" alt="Figma" title="Figma" />&nbsp;&nbsp;&nbsp;&nbsp;
