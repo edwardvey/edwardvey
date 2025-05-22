@@ -1,32 +1,35 @@
 ### 📝 Languages & Tools
 ---
 
-<table border="0" cellpadding="0" cellspacing="0" width="100%">
-  <tr>
-    <td width="50%" valign="top">
-      <strong>🎨 Frontend</strong><br><br>
-      <p align="left" style="margin:0; padding:0;">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="40" alt="HTML5" title="HTML5" />&nbsp;&nbsp;&nbsp;&nbsp;
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="40" alt="CSS3" title="CSS3" />&nbsp;&nbsp;&nbsp;&nbsp;
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="40" alt="JavaScript" title="JavaScript" />&nbsp;&nbsp;&nbsp;&nbsp;
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="40" alt="TypeScript" title="TypeScript" />&nbsp;&nbsp;&nbsp;&nbsp;
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="40" alt="React" title="React" />&nbsp;&nbsp;&nbsp;&nbsp;
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" width="40" alt="Vue.js" title="Vue.js" />&nbsp;&nbsp;&nbsp;&nbsp;
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" width="40" alt="Sass" title="Sass" />&nbsp;&nbsp;&nbsp;&nbsp;
-        <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" width="40" alt="Tailwind CSS" title="Tailwind CSS" />
-      </p>
-    </td>
-    <td width="50%" valign="top">
-      <strong>⚙️ Backend</strong><br><br>
-      <p align="left" style="margin:0; padding:0;">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="40" alt="Node.js" title="Node.js" />&nbsp;&nbsp;&nbsp;&nbsp;
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" width="40" alt="Express.js" title="Express.js" />&nbsp;&nbsp;&nbsp;&nbsp;
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="40" alt="Python" title="Python" />&nbsp;&nbsp;&nbsp;&nbsp;
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" width="40" alt="MySQL" title="MySQL" />&nbsp;&nbsp;&nbsp;&nbsp;
-      </p>
-    </td>
-  </tr>
-</table>
+<div style="display: flex; justify-content: space-between; flex-wrap: wrap; margin-bottom: 16px;">
+
+  <!-- Frontend Column -->
+  <div style="flex: 1; min-width: 250px; padding-right: 16px;">
+    <strong>🎨 Frontend</strong>
+    <p style="margin-top: 8px;">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="40" alt="HTML5" />&nbsp;&nbsp;
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="40" alt="CSS3" />&nbsp;&nbsp;
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="40" alt="JavaScript" />&nbsp;&nbsp;
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="40" alt="TypeScript" />&nbsp;&nbsp;
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="40" alt="React" />&nbsp;&nbsp;
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" width="40" alt="Vue.js" />&nbsp;&nbsp;
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" width="40" alt="Sass" />&nbsp;&nbsp;
+      <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" width="40" alt="Tailwind CSS" />
+    </p>
+  </div>
+
+  <!-- Backend Column -->
+  <div style="flex: 1; min-width: 250px; padding-left: 16px;">
+    <strong>⚙️ Backend</strong>
+    <p style="margin-top: 8px;">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="40" alt="Node.js" />&nbsp;&nbsp;
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" width="40" alt="Express.js" />&nbsp;&nbsp;
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="40" alt="Python" />&nbsp;&nbsp;
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" width="40" alt="MySQL" />
+    </p>
+  </div>
+
+</div>
 
 <strong>🛠️ Design & Development Tools</strong>
 <p align="left">
